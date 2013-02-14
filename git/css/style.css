@@ -3,7 +3,12 @@ body {
   background-color: #eeeeee;
 }
 
-/* line 7, ../scss/style.scss */
+/* line 5, ../scss/style.scss */
+h2 {
+  color: #cc0000;
+}
+
+/* line 10, ../scss/style.scss */
 #container {
   width: 980px;
   margin-left: auto;
