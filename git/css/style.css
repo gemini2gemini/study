@@ -1,5 +1,11 @@
+/* line 1, ../scss/style.scss */
+body {
+  background-color: #eeeeee;
+}
+
+/* line 7, ../scss/style.scss */
 #container {
-  width:980px;
-  margin-left:auto;
-  margin-right:auto;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
 }
