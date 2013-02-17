@@ -1,7 +1,7 @@
 
-#markdown記法
+#Markdown記法
 
-##markdown記載する方法について記載
+##Markdown記載する方法について記載
 
 
 ### 見出しの記載方法
