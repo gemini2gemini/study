@@ -119,7 +119,7 @@
       <section>
         <h3>trackedファイルに対する変更の内容表示</h3>
         <ul>
-          <li>作業ディレクトリの内容とステージングエリアの内容を比較し、まだステージされていない内容をしることができる</li>
+          <li>作業ディレクトリの内容とステージングエリアの内容を比較し、まだステージされていない内容を知る事ができる</li>
           <li>git diff</li>
           <li>ステージされている変更と直近のコミットの内容を比較</li>
           <li>git diff --staged</li>
@@ -132,10 +132,22 @@
       <section>
         <h3>コミットの履歴を表示する</h3>
         <ul>
-          <li>コミットされた履歴を表示する</li>
+          <li>コミットされた履歴を表示する(日付・著者・タイトル・メッセージ）</li>
           <li>git log</li>
           <li>コミットされた履歴と変更点のパッチ形式の表示</li>
           <li>git log -p</li>
+          <li>コミットされた履歴と変更の状態の表示（追加した変更と削除した変更の数表示）</li>
+          <li>git log --stat</li>
+          <li>コミットされた履歴を指定したn数だけ表示</li>
+          <li>git log -n</li>
+          <li>特定の範囲のコミット履歴を表示(commit1の次〜commit2まで表示)</li>
+          <li>git log commit1..commit2</li>
+          <li>特定ファイルのコミット履歴を表示（-n や --oneline は　ファイル名の前に記載)</li>
+          <li>git log hoge.txt</li>
+          <li>コミット履歴をグラフで表示(--onelineと組み合わせると見やすい)</li>
+          <li>git log --graph</li>
+          <li>コミット履歴を相対的な日時で表示</li>
+          <li>git log --relative-date</li>
         </ul>
       </section> 
 
