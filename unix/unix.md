@@ -126,7 +126,7 @@ chmod コマンドを使用して、read,write,excuteの権限を変更する
 ### マニュアルを調べる
 
     man command   //commandの使い方を教えてくれる
-    
+
 
 ### 時間を調べる
 
@@ -137,7 +137,13 @@ chmod コマンドを使用して、read,write,excuteの権限を変更する
     cal  //当月を表示
     cal -y 2013  //一年間のカレンダーを表示
 
+### グラフィカルにディレクトリを表示
 
+ディレクトリをグラフィカルに表示する場合は、treeコマンドを使用する  
+Macの場合、標準でインストールされていないので、Homebrew でインストールする
+
+    brew install tree
+    tree
 
 
 
