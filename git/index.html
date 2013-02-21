@@ -195,6 +195,27 @@
           <li>--hard</li>
           <li>HEAD・インデックス・ワーキングツリーをすべて変更する</li>
         </ul>
+        <ul>
+          <li>git reset --sof HEAD</li>
+          <li>HEAD の位置をHEADに変更し、インデックス、ワーキングツリーはそのままにする。
+つまり何も変わらない。</li>
+          <li>git reset --soft HEAD^</li>
+          <li>HEAD の位置が HEAD^ に移動するだけ。インデックス、ワーキングツリーはそのまま。
+          </li>
+          <li>git reset HEAD</li>
+          <li>HEAD、インデックスを HEAD に変更する。ワーキングツリーはそのまま。</li>
+          <li>git addを取り消す方法としてよく使える</li>
+          <li>git reset HEAD^</li>
+          <li>ワーキングツリーの変更を残しつつ、HEAD、インデックスを HEAD^ に変更する。</li>
+          <li>これも、変更前のインデックスのデータは消える</li>
+          <li>git reset --head HEAD</li>
+          <li>HEAD、インデックス、ワーキングツリーすべてを HEAD に変更する。</li>
+          <li>git add,ワーキングツリーの内容は完全に失われる</li>
+          <li>git reset --head HEAD^</li>
+          <li>HEAD、インデックス、ワーキングツリーすべてを HEAD^ に変更する。</li>
+          <li>git add,ワーキングツリーの内容は完全に失われる</li>
+          <li>git reset --head HEAD^</li>
+        </ul>
       </section>
 
     </section>
