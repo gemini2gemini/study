@@ -137,9 +137,81 @@ new.html.erbの中に、　フォームを作成
 
     form_for(@post) を作成
 
+##### 送信先のメソッドを作成
+
+    def create
+      @post = Post.new(params[:post])
+      if @post.save
+        redirect_to posts_path
+      else
+        render action: 'new'
+      end
+    end
+    
+    オブジェクトの作成を行うが、フォームに入力された内容は、
+    params[:post]で取得することができる。
+    保存がうまくいったら、posts_pathにリダイレクトさせる
+    うまくいかなかったら、'new'というメソッドを実行し、newのviewを書き出し直す。
 
 
+##### バリデーションの追加
 
+viewの入力項目に対するバリデーションルールを設定する場合は、  
+モデルに記載する。（ここでは、models/post.rb)
+
+    validates :title, :presence => true
+    validates : :content, :presence => true,
+                          :length => {:minimum => 5}
+
+
+validateは、 @postが saveされる時に呼ばれるので、  
+validateルールに反した場合、render action: 'new'が呼ばれる
+
+##### バリデーションエラーの表示
+
+バリデーションエラーは、@postのerrors にかえってくる。  
+なので、
+
+    <% if @post.errors.any? %>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+    </ul>
+    <% end %>
+
+
+##### フラッシュメッセージの表示
+
+リダイレクト時に表示させるフラッシュメッセージの実装方法
+redirect_toの後ろにメッセージを追記する  
+下記にいれた notice: は変数となる
+
+    posts_controller.rb　の newの部分に、
+    redirect_to posts_path, notice: '作成されました'
+    を追記
+
+また、メッセージを表示する部分（今回は、index.html.erb)にも
+
+    <div id="notice"><%= notice %></div>
+
+と追加
+
+
+また、日本語を使う場合（今回は、posts_controller.rb)、ページの先頭に
+
+    # coding: utf-8
+
+を入れておかないと文字化けする
+
+##### 表示順をコントロールする
+
+indexで表示する際に、表示順をコントロールする  
+findメソッドで取得した際に、作成日時を降順にすれば、新規作成ばリストの一番上に表示される
+
+    Post.all(:order => "created_at DESC")
+
+SQLのメソッドに近いオプション
 
 
 
