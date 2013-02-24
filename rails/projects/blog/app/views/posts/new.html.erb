@@ -1,0 +1,21 @@
+<h1>New Post</h1>
+
+<%= form_for(@post) do |f| %>
+
+<div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+
+<div class="field">
+  <%= f.label :content %>
+  <%= f.text_area :content, :rows => 5 %>
+</div>
+
+<div class="action">
+  <%= f.submit %>
+</div>
+
+<% end %>
+
+<%= link_to 'home', posts_path %>
