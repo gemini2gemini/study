@@ -1,3 +1,5 @@
+<div id="notice"><%= notice %></div>
+
 <h1>Posts</h1>
 
 <ul>
@@ -10,3 +12,14 @@
 </ul>
 
 <%= link_to 'home', posts_path %> | <%= link_to 'New', new_post_path %>
+
+
+<script>
+$(function(){
+  setTimeout(function(){
+    $('#notice').fadeOut("slow");
+  },800);
+});
+
+
+</script>
