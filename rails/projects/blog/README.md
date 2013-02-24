@@ -1,10 +1,14 @@
 ## ０からアプリを作る場合(ブログシステム)
 
+このアプリの作り方は、[dotinstall](dotinstall.com)を参考に作成
+
+
 1. プロジェクトを作る(rails new)
 2. Postオブジェクトの作成(Model/DB/Controller/URL/View)
 3. Commentオブジェクトの作成(Model/DB/Controller/URL/View)
 
 ### プロジェクトを作る
+
 1. rails new blog --skip-bundle //バンドルインストールをスキップ
 2. Gemfile修正　：javascriptRuntimeの導入  
 therubyracerの利用　//therubyracerのコメント解除
@@ -12,6 +16,26 @@ therubyracerの利用　//therubyracerのコメント解除
 4. serverの立ち上げ //rails server
 
 ### Postオブジェクトの作成
+(Model/DB/Controller/URL/Controller内のMethodとView)
+
+* rails g model Post title:string content:text
+* rake db:migrate
+* rails g controller Posts
+* config/routes.rb を編集
+* rake routes
+* PostsController
+    - index 一覧 -> app/views/posts/index.html.erb 　/ を割り当てる
+    - create → フォームから送信されたデータを処理　　　　viewはなし
+    - new → 新規作成フォーム　app/posts/new　　　posts/new
+    - edit → 　
+    - show → Postの詳細を表示するページ　app/views/posts/show.html.erb 　　posts/(id)
+    - update
+    - destory
+
+
+
+
+
 
 #### Modelを作って、DBに反映させる
 1. Modelを作る　// rails g model Post title:string content:text  
@@ -90,6 +114,33 @@ views/layouts/application.html.erb の中の <%= yield %>　に埋め込まれ�
 3.  root :to => welcom#index を変更する (コントローラ名/メソッド名を書く) 
 (ここでは、 root :to => posts#index)
 4. なお、publicフォルダに、index.html（上記の場合）があると、優先されるので、  リネームする良い
+
+
+##### 記事の詳細を表示する
+
+posts_controller.rb にshowを行うメソッドを追加する
+
+    @post = Post.find(params[:id])
+    Postオブジェクトの中から、parameterがidのものを見つけてくる
+
+その後、viewの中に、show.html.erbを作成する。
+
+##### 新しい記事の追加
+
+posts_controller.rb にnewを行うメソッドを追加する
+
+    @post = Post.new
+    新しいPostを作成して、変数に投げ込む
+
+その後、viewの中に、new.html.erbを作成する。
+new.html.erbの中に、　フォームを作成
+
+    form_for(@post) を作成
+
+
+
+
+
 
 
 
