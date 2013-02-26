@@ -26,10 +26,10 @@ therubyracerの利用　//therubyracerのコメント解除
 * PostsController
     - index 一覧 -> app/views/posts/index.html.erb 　/ を割り当てる
     - create → フォームから送信されたデータを処理　　　　viewはなし
-    - new → 新規作成フォーム　app/posts/new　　　posts/new
-    - edit → 　
+    - new → 新規作成フォーム　app/views/posts/new.html.erb　　　/posts/new
+    - edit → 　編集画面  app/views/posts/edit.html.erb  /posts/(id)/edit
     - show → Postの詳細を表示するページ　app/views/posts/show.html.erb 　　posts/(id)
-    - update
+    - update　→　編集画面からの送信を処理
     - destory
 
 
@@ -212,6 +212,31 @@ findメソッドで取得した際に、作成日時を降順にすれば、新�
     Post.all(:order => "created_at DESC")
 
 SQLのメソッドに近いオプション
+
+
+##### 情報の更新(edit,update)
+
+posts_controller.rbにeditとupdateのメソッドを作成
+
+    def edit
+        @post = Post.find(params[:id])
+    end
+
+    def update
+
+    end
+
+viewに、edit.html.erbを新規作成する必要がある
+edit.html.erb には、
+
+    render 'form'
+    を記載し、同じ階層にある部品テンプレートを取得して使えるようにする
+    viewに、 _form.html.erb で作成し、'new'に作成していたフォームの部分を記載する
+    その後、'new','edit'の両方に、
+    <%= render 'form' %>
+    を記載すれば、_form.html.erb を使い回す事ができる
+
+
 
 
 
