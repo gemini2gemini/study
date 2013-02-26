@@ -215,6 +215,8 @@
           <li>HEAD、インデックス、ワーキングツリーすべてを HEAD^ に変更する。</li>
           <li>git add,ワーキングツリーの内容は完全に失われる</li>
           <li>git reset --head HEAD^</li>
+          <li>git resetコマンドは、実行前のHEADをORIG_HEADに保存するようになっている。間違ってgit resetコマンドを実行した場合には、このORIG_HEADを使えば戻せる。</li>
+          <li>git reset --head ORIG_HEAD</li>
         </ul>
       </section>
 
