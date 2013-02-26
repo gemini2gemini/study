@@ -1,0 +1,26 @@
+<%= form_for(@post) do |f| %>
+
+<% if @post.errors.any? %>
+<ul>
+<% @post.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+<% end %>
+
+
+<div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+
+<div class="field">
+  <%= f.label :content %>
+  <%= f.text_area :content, :rows => 5 %>
+</div>
+
+<div class="action">
+  <%= f.submit %>
+</div>
+
+<% end %>
