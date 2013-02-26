@@ -222,10 +222,6 @@ posts_controller.rbにeditとupdateのメソッドを作成
         @post = Post.find(params[:id])
     end
 
-    def update
-
-    end
-
 viewに、edit.html.erbを新規作成する必要がある
 edit.html.erb には、
 
@@ -236,7 +232,16 @@ edit.html.erb には、
     <%= render 'form' %>
     を記載すれば、_form.html.erb を使い回す事ができる
 
+その後、 posts_controller.rbに updateメソッドを記載
 
+    def update
+      @post = Post.find(params[:id])
+      if @posts.update_attributes(params[:post])
+        redirect_to posts_path, notice: '更新されました'
+      else
+        render action: 'edit'
+      end
+    end
 
 
 
