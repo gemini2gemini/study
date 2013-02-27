@@ -2,4 +2,15 @@
 
 <p><%= @post.content %></p>
 
+<h2>Comments</h2>
+<ul>
+<% if @post.comments.any? %>
+<% @post.comments.each do |comment| %>
+<li><%= comment.body %>(by <%= comment.commenter %>)</li>
+<% end %>
+<% else %>
+<li>no comment yet</li>
+<% end %>
+</ul>
+
 <%= link_to 'home', posts_path %>
