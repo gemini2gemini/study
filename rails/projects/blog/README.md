@@ -275,6 +275,11 @@ post一覧に、削除のリンクを作成する。
     index.html.erb のli要素に、post.idを設定する
     <li id="post_<%= post.id %>">
 
+#### Commentモデルの作成
+
+    rails g model Comment commenter:string body:text post:references
+    post:references　と書く事で、postとひも付けるフィールドが自動的に作成される
+    rake db:migrate
 
 
 ### その他
