@@ -308,7 +308,20 @@ post一覧に、削除のリンクを作成する。
     models/post.rb に、comment.rbとの対応関係を記載
     has_many :comments
 
+#### コメントの表示
+コメントは記事の下のあたりに入れる事にする
+Postのshowにコメントを入れる
 
+    <h2>Comments</h2>
+    <ul>
+    <% if @post.comments.any? %>
+    <% @post.comments.each do |comment| %>
+    <li><%= comment.body %>(by <%= comment.commenter %>)</li>
+    <% end %>
+    <% else %>
+    <li>no comment yet</li>
+    <% end %>
+    </ul>
 
 
 ### その他
