@@ -30,7 +30,7 @@ therubyracerの利用　//therubyracerのコメント解除
     - edit → 　編集画面  app/views/posts/edit.html.erb  /posts/(id)/edit
     - show → Postの詳細を表示するページ　app/views/posts/show.html.erb 　　posts/(id)
     - update　→　編集画面からの送信を処理
-    - destory
+    - destory　→　削除
 
 
 
@@ -236,13 +236,28 @@ edit.html.erb には、
 
     def update
       @post = Post.find(params[:id])
-      if @posts.update_attributes(params[:post])
+      if @post.update_attributes(params[:post])
         redirect_to posts_path, notice: '更新されました'
       else
         render action: 'edit'
       end
     end
 
+
+##### 記事の削除(destroy)
+
+特に、viewがあるわけではないので、メソッドを作る。  
+post一覧に、削除のリンクを作成する。
+
+    View(index.html.erb)に、Deleteのリンク作成
+    <%= link_to 'Delete', post, :confirm => 'Sure', :method => :delete %>
+
+    posts_controller.rbに、destroyメソッドを記載する
+    def destroy
+      @post = Post.find(params[:id])
+      @post.destroy
+      redirect_to posts_path, notice: '削除しました！'
+    end
 
 
 
