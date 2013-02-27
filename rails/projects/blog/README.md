@@ -259,6 +259,22 @@ post一覧に、削除のリンクを作成する。
       redirect_to posts_path, notice: '削除しました！'
     end
 
+##### 記事の削除をAjax化する
+
+    削除リンクをAjaxに対応させる(index.html.erb)
+    :remote => true　を追加
+
+    posts_controller.rbのdestroyメソッド内で、redirectをせずに、返り値をjsonで返すようにする
+    render json: { post: @post }
+    
+    jQueryで検出して処理をする
+    $('a[data-method="delete"]').on('ajax:success', function(e,data,status,xhr){
+      $('#post_' + data.post.id).fadeOut("slow");
+    });
+
+    index.html.erb のli要素に、post.idを設定する
+    <li id="post_<%= post.id %>">
+
 
 
 ### その他
