@@ -324,6 +324,42 @@ Postのshowにコメントを入れる
     </ul>
 
 
+#### コメント投稿フォームの作成
+show.html.erb の中に、投稿フォームを記載する
+以下を追加する
+
+    <h2>Add a Comment</h2>
+    <%= form_for(@post, @comment) do |f| %>
+    <div class="field">
+      <%= f.label :commenter %>
+      <%= f.text_field :commenter %>
+    </div>
+    <div class="field">
+      <%= f.label :body %>
+      <%= f.text_area :body, :rows => 5 %>
+    </div>
+    <div class="action">
+      <%= f.submit %>
+    </div>
+    <% end %>
+
+コントローラーの中に、オブジェクトを作る
+
+    posts_controller.rbの中に以下記載
+    def show
+      @post = Post.find(params[:id])
+      @comment = Post.find(params[:id]).comments.build
+    end
+
+#### コメントを追加するメソッドをコントローラーに追加する
+comments_controller.rb に記載
+
+    def create
+      @post = Post.find(params[:post_id])
+      @comment = Post.find(params[:post_id]).comments.create(params[:comment])
+      redirect_to post_path(@post)
+    end
+
 ### その他
 
 #### コンソール機能
