@@ -409,7 +409,11 @@ comments_controller.rb に記載
     });
     </script>
 
+#### コメントの件数追加
 
+    記事の一覧に、コメントの数を表示
+    index.html.erbに、コメント追加の記述
+    (<%= post.comments.size %>)
 
 
 ### その他
