@@ -416,9 +416,22 @@ comments_controller.rb に記載
     (<%= post.comments.size %>)
 
 
+
 ### その他
 
 #### コンソール機能
 
 * rails console
 * rails db
+
+
+#### Railsの日本語対応
+
+日本語化するファイルは、Githubから取得。
+
+    https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/ja.yml
+    をダウンロードし、config/locales/ に　ja.ymlにリネームしていれる
+
+    config/application.rbに、
+    config.i18n.default_locale = :ja　　を追記
+
