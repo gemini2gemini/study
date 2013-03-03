@@ -14,8 +14,17 @@
 </ul>
 
 <h2>Add a Comment</h2>
-
 <%= form_for([@post, @comment]) do |f| %>
+
+<% if @comment.errors.any? %>
+<ul>
+<% @comment.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+<% end %>
+
+
 <div class="field">
   <%= f.label :commenter %>
   <%= f.text_field :commenter %>
