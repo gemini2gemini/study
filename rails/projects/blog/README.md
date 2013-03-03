@@ -360,6 +360,33 @@ comments_controller.rb に記載
       redirect_to post_path(@post)
     end
 
+
+#### バリデーションの設定（コメント部分に）
+
+    コメントのモデルにバリデーションを記述
+    validates :commenter, :presence => true
+    validates :body, :presence => true,
+                        :length => {:minimum => 5}
+
+    comments_controller.rbに、コメント入力時の分岐を記述
+    if @comment.save
+      redirect_to post_path(@post)
+    else
+      render :template => "posts/show"
+    end
+
+    view/show.html.erb　に、エラーの場合のmsg出力部分を記述
+    <% if @comment.errors.any? %>
+    <ul>
+    <% @comment.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+    </ul>
+    <% end %>
+
+
+
+
 ### その他
 
 #### コンソール機能
