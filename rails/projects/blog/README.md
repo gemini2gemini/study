@@ -384,6 +384,31 @@ comments_controller.rb に記載
     </ul>
     <% end %>
 
+#### コメントの削除
+
+    show.html.erbに、コメント削除部分を追加
+    コメント削除用のリンクおよび確認メソッド、デリーとメソッド、Ajaxメソッドの追加
+    <%= link_to 'delete', [comment.post, comment], :confirm => 'sure?',
+                                               :method => :delete,
+                                               :remote => true %>
+
+    controller/comments_controller.rbに、デストロイメソッドの追加
+    def destroy 
+      @comment = Comment.find(params[:id])
+      @comment.destroy
+      render json: { comment: @comment }
+    end
+
+    commentの削除をAjax対応
+    <script>
+    $(function(){
+      $('a[data-method="delete"]').on('ajax:success', function(e,data,status,xhr){
+        $('#comment_' + data.comment.id).fadeOut("slow");
+
+      });
+    });
+    </script>
+
 
 
 
