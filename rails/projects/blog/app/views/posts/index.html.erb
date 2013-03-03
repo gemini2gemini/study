@@ -5,6 +5,7 @@
 <ul>
 <% @posts.each do |post| %>
 <li id="post_<%= post.id %>"><%= link_to post.title, post_path(post) %>
+(<%= post.comments.size %>)
 <%= link_to 'Edit', edit_post_path(post) %>
 <%= link_to 'Delete', post, :confirm => 'Sure', :method => :delete, :remote => true %>
 </li>
