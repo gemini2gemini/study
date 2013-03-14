@@ -23,7 +23,7 @@ HTTPサーバーの起動
 
 ### メソッド
 
-指定したRHTMLを返す
+renderメソッド：　指定したRHTMLを返す
 
     render option
 
@@ -35,6 +35,17 @@ HTTPサーバーの起動
 
     指定されたテキストを表示し、コンテンツタイプをapplication/xmlに設定
     render :json => モデルor文字列
+
+matchメソッド：　アクセス可能なURLを指定することで、HTMLリクエストを処理
+
+    match(URLパターン [, オプション])
+    
+    match ":controller(/:action(/:id(.format)))"
+    以下と一致
+    http://localhost:3000/books
+    http://localhost:3000/hello/index
+    http://localhost:3000/blog/show/112
+    http://localhost:3000/blog/show/112.xml
 
 
 ### Tips
