@@ -58,6 +58,12 @@ matchメソッド：　アクセス可能なURLを指定することで、HTML�
 
     @name = "hoge,fuga,piyo"
 
+レイアウトテンプレート(/views/layouts/application.html.erb)
+
+    Railsではデフォルトで、application.html.erbの「<%= yield %>」に個別のテンプレートを埋め込んだ上で最終的な出力を生成する。
+    application.html.erbのことを「レイアウトテンプレート」、あるいは「レイアウト」と呼ぶ。
+
+
 
 ### 規則
 
@@ -72,4 +78,3 @@ matchメソッド：　アクセス可能なURLを指定することで、HTML�
 以下の一行を、スクリプトファイルの先頭に記載する
 
     # coding: utf-8
-
