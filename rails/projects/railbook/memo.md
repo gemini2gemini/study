@@ -19,6 +19,11 @@ HTTPサーバーの起動
     rails generate controller name
     rails g controller name
 
+モデルクラスの作成
+
+    rails generate model name field:type
+    rails g model name field:type
+    name: モデル名 field:フィールド名 type:データ型
 
 
 ### メソッド
