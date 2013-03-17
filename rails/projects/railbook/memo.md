@@ -133,7 +133,7 @@ resourcesメソッド
 
     resources :リソース名の複数形
     config/routes.rbに resourcesメソッドを記述すると、リソース名を設定できる
-    例）　resources :name
+    例）　resources :name（複数形)
 
 ### 用語
 
