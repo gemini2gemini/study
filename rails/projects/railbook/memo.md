@@ -160,6 +160,13 @@ link_toメソッド
     <%= link_to "編集", edit_book_path(book) %>
     <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
 
+    特殊なパス表記(ビューヘルパーによる)
+    books_path          →  /books
+    book_path(id)       →  /books/:id
+    new_book_path       →  /books/new
+    edit_book_path(id)  →  /books/:id/edit
+
+
 
 
 ### 用語
@@ -192,6 +199,7 @@ O/R(Object/Relationnal)マッパー
 
     テンプレートファイルを記述する際に役立つメソッドの総称
     フォーム要素の生成をはじめ、文字列や数値の整形、エンコード処理などビューでよく利用する操作をよりシンプルなコードで記述ができる
+
 
 ### 規則
 
