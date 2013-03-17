@@ -167,6 +167,36 @@ link_toメソッド
     edit_book_path(id)  →  /books/:id/edit
 
 
+findメソッド
+
+    データベースからデータを検索
+    与えられたid値などから値に対応するレコードを検索し、その結果をモデルオブジェクトに返す
+    
+    モデル名.find(:id)
+
+    例）
+    @book =Book.find(params[:id])
+    
+
+paramsメソッド
+
+    URLから送られてきた値やフォームで入力した値をparams[:パラメータ名]で取得する
+    
+    ・リンクによるパラメータの受け渡し
+    ・フォームによるパタメータの受け渡し
+    ・日本語も自動的にデコード
+
+    params[:パラメータ名]
+
+    例）
+    <% link_to "show", book, id: 1 %>
+    def show
+      id = params[:id] # id = 1
+    end
+
+
+
+
 
 
 ### 用語
