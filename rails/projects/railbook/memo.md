@@ -202,8 +202,22 @@ paramsメソッド
     end
 
 
+form_forメソッド
 
+    フォームの開始・終了タグを生成
+    <%= form_for(model) do |f| %>
+    <% end %>
 
+    form_forメソッドとあわせて、form_for配下で利用できるビューヘルパーがある。
+    f.label
+    f.text_field
+    f.date_select
+    f.check_box
+    f.submit
+
+    例）
+    <%= f.label :isbn %>
+    <%= f.text_filed :isbn %>
 
 
 ### 用語
