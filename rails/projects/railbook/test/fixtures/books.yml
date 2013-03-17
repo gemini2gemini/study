@@ -1,91 +1,17 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-mysql5:
-  id: 1
-  isbn: 978-4-7980-2812-5
-  title: MySQL5逆引き大全460の極意
-  price: 2730
-  publish: 秀和システム
-  published: 2010-12-01
+one:
+  isbn: MyString
+  title: MyString
+  price: 1
+  publish: MyString
+  published: 2013-03-17
   cd: false
 
-js:
-  id: 2
-  isbn: 978-4-7741-4466-5
-  title: JavaScript本格入門
-  price: 3129
-  publish: 技術評論社
-  published: 2010-11-26
-  cd: false
-
-aspnet4:
-  id: 3
-  isbn: 978-4-82229-425-0
-  title: プログラムを作ろう！Microsoft ASP.NET 4 入門
-  price: 1995
-  publish: 日経BP社
-  published: 2010-11-11
-  cd: true
-
-vcpp2010:
-  id: 4
-  isbn: 978-4-82229-423-6
-  title: プログラムを作ろう！Microsoft Visual C++ 2010 入門
-  price: 1995
-  publish: 日経BP社
-  published: 2010-09-06
-  cd: true
-
-azure:
-  id: 5
-  isbn: 978-4-7980-2695-4
-  title: Windows Azure 実践クラウド・プログラミング
-  price: 3360
-  publish: 秀和システム
-  published: 2010-07-29
-  cd: false
-
-kisop:
-  id: 6
-  isbn: 978-4-8443-2879-7
-  title: 改訂3版 基礎PHP
-  price: 3360
-  publish: インプレスジャパン
-  published: 2010-06-18
-  cd: true
-
-vsmook:
-  id: 7
-  isbn: 978-4-7981-2205-2
-  title: Visual Studio 2010スタートアップガイド
-  price: 2079
-  publish: 翔泳社
-  published: 2010-06-09
-  cd: false
-
-catalyst:
-  id: 8
-  isbn: 978-4-8443-2865-0
-  title: PerlフレームワークCatalyst完全入門
-  price: 4410
-  publish: インプレスジャパン
-  published: 2010-05-20
-  cd: false
-
-dokushu:
-  id: 9
-  isbn: 978-4-7981-2151-2
-  title: 独習PHP 第2版
-  price: 3360
-  publish: 翔泳社
-  published: 2010-04-12
-  cd: false
-
-apache:
-  id: 10
-  isbn: 978-4-7741-4223-4
-  title: Apacheポケットリファレンス
-  price: 2604
-  publish: 技術評論社
-  published: 2010-04-10
+two:
+  isbn: MyString
+  title: MyString
+  price: 1
+  publish: MyString
+  published: 2013-03-17
   cd: false
