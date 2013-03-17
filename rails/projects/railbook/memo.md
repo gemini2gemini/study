@@ -275,6 +275,16 @@ update_attributesメソッド
     @book.update_attributes(params[:book])  → return true/false
 
 
+destroyメソッド
+
+    データベースからデータを削除する
+    @object.destroy
+
+    例）
+    @book = Book.find(params[:id])
+    @book.destroy
+
+
 
 
 ### 用語
@@ -377,6 +387,14 @@ O/R(Object/Relationnal)マッパー
     シンボルをキーとするハッシュは、Ruby1.9からは、以下のようにも書ける
     name: "Japan", address: "tokyo"
 
+ヘルパーメソッドの ●●_url, ●●_pathの違い
+
+    ●●_url　 :絶対パスを表示
+    ●●_path  :相対パスを表示
+
+    [action]_[resource]_path
+    [action]_[resource]_url
+    というルールでメソッドが生成される 
 
 
 
