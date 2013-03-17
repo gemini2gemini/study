@@ -261,6 +261,22 @@ redirect_toメソッド
     alertオプションは、リダイレクト先に　alertのエラーメッセージを表示する。
 
 
+update_attributesメソッド
+
+    引数に渡された値でオブジェクトの対応するプロパティを書き換え、その結果をデーターベースに保存する
+    update_attributesメソッドは、saveメソッドと同じく、更新のtrue/falseで返す
+    利用するには、あらかじめfindメソッドなどで更新対象のオブジェクトを取得しておく必要がある
+    メソッドの実行時に、モデルのバリデートの確認も行っている
+
+    @object.update_attributes(attrs)
+
+    例）
+    @book = Book.find(params[:id])
+    @book.update_attributes(params[:book])  → return true/false
+
+
+
+
 ### 用語
 
 テンプレート変数（インスタンス変数）
