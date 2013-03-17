@@ -1,0 +1,29 @@
+<h1>Listing fun_comments</h1>
+
+<table>
+  <tr>
+    <th>Author no</th>
+    <th>Name</th>
+    <th>Body</th>
+    <th>Deleted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fun_comments.each do |fun_comment| %>
+  <tr>
+    <td><%= fun_comment.author_no %></td>
+    <td><%= fun_comment.name %></td>
+    <td><%= fun_comment.body %></td>
+    <td><%= fun_comment.deleted %></td>
+    <td><%= link_to 'Show', fun_comment %></td>
+    <td><%= link_to 'Edit', edit_fun_comment_path(fun_comment) %></td>
+    <td><%= link_to 'Destroy', fun_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fun comment', new_fun_comment_path %>

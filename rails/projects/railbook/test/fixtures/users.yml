@@ -1,0 +1,49 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+yyamada:
+  id: 1
+  username: yyamada
+  password: 8cb2237d0679ca88db6464eac60da96345513964
+  email: yyamada@wings.msn.to
+  dm: true
+  roles: admin,manager
+
+isatou:
+  id: 2
+  username: isatou
+  password: 8cb2237d0679ca88db6464eac60da96345513964
+  email: isatou@wings.msn.to
+  dm: false
+  roles: admin
+
+hsuzuki:
+  id: 3
+  username: hsuzuki
+  password: 8cb2237d0679ca88db6464eac60da96345513964
+  email: hsuzuki@wings.msn.to
+  dm: true
+  roles: manager
+
+tyamamoto:
+  id: 4
+  username: tyamamoto
+  password: 8cb2237d0679ca88db6464eac60da96345513964
+  email: tyamamoto@wings.msn.to
+  dm: false
+  roles: member
+
+shayashi:
+  id: 5
+  username: shayashi
+  password: 8cb2237d0679ca88db6464eac60da96345513964
+  email: shayashi@wings.msn.to
+  dm: true
+  roles: member
+
+nkakeya:
+  id: 6
+  username: nkakeya
+  password: 8cb2237d0679ca88db6464eac60da96345513964
+  email: nami@wings.msn.to
+  dm: true
+  roles: manager,member

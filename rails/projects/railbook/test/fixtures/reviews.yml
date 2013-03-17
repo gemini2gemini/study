@@ -1,0 +1,55 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+mysql5_1:
+  id: 1
+  book_id: 1
+  user_id: 2
+  body: MySQLを使うなら、手元に置いておきたい本ですね。
+
+mysql5_2:
+  id: 2
+  book_id: 1
+  user_id: 3
+  body: 困ったときにはこの本を頼りに解決策を考えています。オンラインのリファレンスよりも使い勝手が良いです。
+
+js_1:
+  id: 3
+  book_id: 2
+  user_id: 2
+  body: とても役に立ちます。きちんとおさらいしたい人にお勧めの一冊です。
+
+js_2:
+  id: 4
+  book_id: 2
+  user_id: 4
+  body: 丁寧に書かれています。サンプルも多く、分かりやすくて良いです。
+
+js_3:
+  id: 5
+  book_id: 2
+  user_id: 5
+  body: 超初心者の私には少し難しいです。でも、真似して書いているうちに少しずつ分かるようになってきました。
+
+aspnet4_1:
+  id: 6
+  book_id: 3
+  user_id: 1
+  body: 図が多く、手順が細かく書かれていて、初心者向きですね。
+
+aspnet4_2:
+  id: 7
+  book_id: 3
+  user_id: 5
+  body: ほとんど迷うことなくサンプルアプリケーションが完成しました。嬉しいです。
+vcpp2010:
+  id: 8
+  book_id: 4
+  user_id: 6
+  body: 初めてのプログラミングで不安でしたが、本の通りに手順を進めていくことで、きちんとサンプル通りに動くものが出来上がりました。
+
+azure:
+  id: 9
+  book_id: 5
+  user_id: 3
+  body: 話題のAzureに手を出してみました。日本語資料としては、この本が分かりやすくてよかったです。
+
