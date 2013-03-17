@@ -11,8 +11,13 @@
 
 HTTPサーバーの起動  
 
-    rails server
-    rails s
+    rails server [options]
+    rails s [options]
+    
+    options
+    -e : 特定の環境(test,development,production)でサーバーを起動(デフォルトはdevelopment)
+    -p : 使用するポート番号
+
 
 コントローラークラスの生成
 
@@ -97,7 +102,7 @@ allメソッド：　テーブルからすべてのレコードを取得
     モデル名.all
     例）
     Book.all
-    # SELECT "books" * FROM "books"
+    # SELECT "books".* FROM "books"
 
 
 
