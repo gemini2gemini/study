@@ -92,6 +92,16 @@ matchメソッド：　アクセス可能なURLを指定することで、HTML�
     http://localhost:3000/blog/show/112.xml
 
 
+allメソッド：　テーブルからすべてのレコードを取得
+
+    モデル名.all
+    例）
+    Book.all
+    # SELECT "books" * FROM "books"
+
+
+
+
 ### 用語
 
 テンプレート変数（インスタンス変数）
