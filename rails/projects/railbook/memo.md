@@ -71,6 +71,11 @@ Scaffoldの作成
     rake db:drop
 
 
+ルートのリスト表示
+
+    rake routes
+    routes.rbを解析し、現在の有効なルートをリスト表示
+
 ### SQLiteコマンド
 
 テーブルの確認
