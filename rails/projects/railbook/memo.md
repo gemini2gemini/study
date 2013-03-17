@@ -25,11 +25,45 @@ HTTPサーバーの起動
     rails g model name field:type
     name: モデル名 field:フィールド名 type:データ型
 
+データベースクライアントの起動
+
+    rails dbconsole
+    rails db
+
+    config/database.yml で定義した接続情報に従い、データベースクライアントの起動が可能となる
+
+
+### rakeコマンド
+
 マイグレーション
 
     rake db:migrate
     テーブルレイアウトを作成/変更するためのしくみ
     テーブルの保守の作業を半自動化でき、レイアウト変更が生じた場合も簡単に反映可能
+
+フィクスチャ
+
+    rake db:fixtures:load FIXTURE=fixture_name
+    テストデータの読み込み、FIXTURE=読み込むファイル名を記載（拡張子不要）
+
+
+### SQLiteコマンド
+
+テーブルの確認
+
+    .tables
+    データベース内のテーブル一覧を表示
+
+テーブルスキーマの表示
+
+    .schema table_name
+    指定するテーブルのスキーマを表示
+
+ツールの終了
+    
+    .quit
+    .exit
+    SQLiteクライアントを終了する
 
 ### メソッド
 
@@ -82,7 +116,8 @@ O/R(Object/Relationnal)マッパー
 フィクスチャ
 
     テストデータをデータベースに流し込むしくみ
-    フィクスチャとは、YAMLやCSV形式のテキストファイルをデータベースに流し込む仕組み
+    フィクスチャとは、YAMLやCSV形式のテキストファイルをデータベースに流し込む
+
 
 
 
