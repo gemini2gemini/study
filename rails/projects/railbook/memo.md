@@ -124,7 +124,11 @@ allメソッド：　テーブルからすべてのレコードを取得
     # SELECT "books".* FROM "books"
 
 
+resourcesメソッド
 
+    resources :リソース名の複数形
+    routes.rbに resourcesメソッドを記述すると、リソース名を設定できる
+    
 
 ### 用語
 
