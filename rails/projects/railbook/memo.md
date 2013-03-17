@@ -135,6 +135,25 @@ resourcesメソッド
     config/routes.rbに resourcesメソッドを記述すると、リソース名を設定できる
     例）　resources :name（複数形)
 
+
+respond_toメソッド
+
+    クライアントからの要求に応じてフォーマットの変更し、
+    異なるテンプレートを呼び出す仕組み
+
+    respond_to do |format|
+      formant.出力形式
+    end
+
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @instance }
+      format.json { render json: @instance }
+    end
+
+
+
+
 ### 用語
 
 テンプレート変数（インスタンス変数）
