@@ -37,6 +37,13 @@ HTTPサーバーの起動
 
     config/database.yml で定義した接続情報に従い、データベースクライアントの起動が可能となる
 
+クラスとその関係ファイルの削除
+
+    rails destroy model name
+    rails destroy controller name
+    作成したクラスとその関係ファイルをまとめて削除
+    
+
 
 ### rakeコマンド
 
