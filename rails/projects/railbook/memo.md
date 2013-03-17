@@ -42,7 +42,14 @@ HTTPサーバーの起動
     rails destroy model name
     rails destroy controller name
     作成したクラスとその関係ファイルをまとめて削除
-    
+
+Scaffoldの作成
+
+    rails generate scaffold name field:type
+    rails g scaffold name field:type
+
+    アプリケーションの動作に必要なコントローラークラスからテンプレートファイル、モデルクラス、マイグレーションファイルまでまとめて生成
+
 
 
 ### rakeコマンド
@@ -57,6 +64,11 @@ HTTPサーバーの起動
 
     rake db:fixtures:load FIXTURE=fixture_name
     テストデータの読み込み、FIXTURE=読み込むファイル名を記載（拡張子不要）
+
+
+データベースの削除
+
+    rake db:drop
 
 
 ### SQLiteコマンド
