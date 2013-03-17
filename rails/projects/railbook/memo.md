@@ -132,7 +132,7 @@ allメソッド：　テーブルからすべてのレコードを取得
 resourcesメソッド
 
     resources :リソース名の複数形
-    routes.rbに resourcesメソッドを記述すると、リソース名を設定できる
+    config/routes.rbに resourcesメソッドを記述すると、リソース名を設定できる
     例）　resources :name
 
 ### 用語
