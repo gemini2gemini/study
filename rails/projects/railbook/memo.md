@@ -243,7 +243,22 @@ saveメソッド
     @book = Book.new(params[:book])
     @book.save
 
+redirect_toメソッド
 
+    指定されたページへリダイレクトを行う
+    redirect_to(リダイレクト先のURL [, :status => ステイタスコード, オプション])
+
+    例）
+    redirect_to @book, notice: 'successfully created.'
+
+    @bookは、現在のBookオブジェクトのIDを示すため、登録ID値が5の場合、「/books/5」の画面にリダイレクトされる
+
+    notice:　"文字列"
+    noticeオプションは、リダイレクト先に伝えるべきメッセージを表示する。
+    リダイレクト先に、 <%= notice %>という記述があると、その部分にメッセージを埋め込む
+
+    alert: "文字列"
+    alertオプションは、リダイレクト先に　alertのエラーメッセージを表示する。
 
 
 ### 用語
