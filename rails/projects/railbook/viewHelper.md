@@ -71,3 +71,25 @@ form_forメソッド: モデルを編集するためのフォームを生成す�
       <input name="commit" type="submit" value="Create Book" />
     </div>
     </form>
+
+
+### 用語
+
+    FormTagヘルパー
+    label_tag, text_field_tag,text_area_tagのように、末尾に _tag付きのヘルパー
+
+    Formヘルパー
+    label, text_field, text_areaのように、末尾に _tagなしのヘルパー
+
+    f.Formヘルパー
+    f.label, f.text_fieldのように、「f.」で呼び出すヘルパー
+
+
+
+
+
+
+
+
+
+    
