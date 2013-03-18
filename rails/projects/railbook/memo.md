@@ -288,7 +288,29 @@ destroyメソッド
     @book.destroy
 
 
+### フォーム関連のビューヘルパー
 
+form_tagメソッド：汎用的なフォームを出力する
+
+    前提となるモデルが存在しない汎用的なフォーム(検索フォームなど)の生成に利用
+    <%= form_tag(リンク先 [オプション]) do %>
+    <% end %>
+
+    <%= form_tag({controller: "keyword", action: "search"},{id: "fm", class: "search"}) do %>
+    検索キーワード：
+    <% end %>
+
+    ↓↓↓↓↓↓↓↓↓↓↓↓
+
+    <form accept-charset="UTF-8" action="/keyword/search" class="search" id="fm" method="post">
+    <div style="margin:0;padding:0;display:inline">
+    <input name="utf8" type="hidden" value="&#x2713;" />
+    <input name="authenticity_token" type="hidden" value="ZZLtHSfm6GXgkTZADHC9R1rrd2EhBW/m3WueF0iPfpw=" />
+    </div>
+    検索キーワード：
+    </form>
+
+    
 
 ### 用語
 
