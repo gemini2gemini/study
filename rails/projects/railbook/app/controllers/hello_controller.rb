@@ -29,4 +29,8 @@ class HelloController < ApplicationController
     #@book = Book.find(1)
   end
 
+  def field
+    @book = Book.new
+  end
+
 end

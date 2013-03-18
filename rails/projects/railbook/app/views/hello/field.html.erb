@@ -1,0 +1,44 @@
+<%= form_for(@book) do |f| %>
+
+テキストボックス：
+<%= f.text_field :isbn, {size: 20, maxlength: 25, read_only: true} %><br />
+
+パスワードボックス：
+<%= f.password_field :isbn, {size: 10, maxlength: 15, disabled: true} %><br />
+
+テキストエリア：<br />
+<%= f.text_area :isbn, {cols: 40, rows: 5} %><br />
+
+ラジオボタン：
+<label><%= f.radio_button :publish, "技術評論社", {class: "rd"} %>技術評論社</label>
+<label><%= f.radio_button :publish, "翔泳社", {class: "rd"} %>翔泳社</label>
+<label><%= f.radio_button :publish, "マイコミ", {class: "rd"} %>マイコミ</label><br />
+
+チェックボックス：
+<label><%= f.check_box :cd, {class: "chk"},"yes", "no" %>CD付属？</label><br />
+
+ファイル入力ボックス:
+<%= f.file_field :isbn, {size: 10, maxlength: 15} %><br />
+
+メール入力ボックス：
+<%= f.email_field :isbn, {size: 10, maxlength: 15} %><br />
+
+数値入力ボックス：
+<%= f.number_field :isbn, {size: 10, maxlength: 15, step: 10} %><br />
+
+範囲フィールド：
+<%= f.range_field :isbn, {size: 10, maxlength: 15, max:100, min: 0} %><br />
+
+検索ボックス：
+<%= f.search_field :isbn, {size:10, maxlength: 15} %><br />
+
+電話番号入力ボックス：
+<%= f.telephone_field :isbn, {size:10, maxlength:15} %><br />
+
+URL入力ボックス：
+<%= f.url_field :isbn, {size: 10, maxlength: 15} %><br />
+
+隠しフィールド：
+<%= f.hidden_field :isbn, {size:10, maxlength:15} %><br />
+
+<% end %>
