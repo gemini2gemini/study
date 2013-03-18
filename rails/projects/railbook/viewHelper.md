@@ -73,6 +73,64 @@ form_forメソッド: モデルを編集するためのフォームを生成す�
     </form>
 
 
+f.Formヘルパー
+
+    <%= f.label prop %>                                    :ラベル生成
+    <%= f.text_field prop[,opts] %>                :テキストボックスを生成
+    <%= f.password_field prop[,opts] %>        :パスワード入力ボックスを生成
+    <%= f.file_field prop[,opts] %>                 :ファイル選択ボックスを生成
+    <%= f.hidden_field prop[,opts] %>           :隠しフィールドを生成
+    <%= f.email_field prop[,opts] %>             :メールドレス入力ボックスを生成
+    <%= f.number_field prop[,opts] %>          :数値入力ボックスを生成
+    <%= f.range_field prop[,opts] %>             :範囲バーを生成
+    <%= f.search_field prop[,opts] %>            :検索ボックスを生成
+    <%= f.telephone_field prop[,opts] %>       :電話番号入力ボックスを生成
+    <%= f.url_field prop[,opts] %>                   :URL入力ボックスを生成
+    <%= f.text_area prop[,opts] %>                   :テキストエリアを生成
+    <%= f.radio_button prop, value[,opts] %>         :ラジオボタンを生成
+    <%= f.check_box prop, [,opts[,checked= "1" [,unchecked = "0"]]] %>:チェックボックスを生成
+    <%= f.select prop, choice[,opts[,html_opts]] %>         :選択ボックスを生成
+
+
+Formヘルパー
+
+    <%= label obj, prop[,body[,opts]] %>                  :ラベル生成
+    <%= text_field name [,value[,opts]] %>                :テキストボックスを生成
+    <%= password_field obj, prop[,opts] %>        :パスワード入力ボックスを生成
+    <%= file_field obj, prop[,opts] %>                 :ファイル選択ボックスを生成
+    <%= hidden_field obj, prop[,opts] %>           :隠しフィールドを生成
+    <%= email_field obj, prop[,opts] %>             :メールドレス入力ボックスを生成
+    <%= number_field obj, prop[,opts] %>          :数値入力ボックスを生成
+    <%= range_field obj, prop[,opts] %>             :範囲バーを生成
+    <%= search_field obj, prop[,opts] %>            :検索ボックスを生成
+    <%= telephone_field obj, prop[,opts] %>       :電話番号入力ボックスを生成
+    <%= url_field obj, prop[,opts] %>                   :URL入力ボックスを生成
+    <%= text_area obj, prop[,opts] %>                   :テキストエリアを生成
+    <%= radio_button obj, prop, value[,opts] %>         :ラジオボタンを生成
+    <%= check_box obj, prop, [,opts[,checked= "1" [,unchecked = "0"]]] %>:チェックボックスを生成
+    <%= select obj, prop, choice[,opts[,html_opts]] %>         :選択ボックスを生成
+　　　
+
+FormTagヘルパー
+
+    <%= label_tag obj, prop %>                               :ラベル生成
+    <%= text_field_tag name[,value[,opts]] %>                :テキストボックスを生成
+    <%= password_field_tag name[,value[,opts]] %>        :パスワード入力ボックスを生成
+    <%= file_field_tag name[,value[,opts]] %>                 :ファイル選択ボックスを生成
+    <%= hidden_field_tag name[,value[,opts]] %>           :隠しフィールドを生成
+    <%= email_field_tag name[,value[,opts]] %>             :メールドレス入力ボックスを生成
+    <%= number_field_tag name[,value[,opts]] %>          :数値入力ボックスを生成
+    <%= range_field_tag name[,value[,opts]] %>             :範囲バーを生成
+    <%= search_field_tag name[,value[,opts]] %>            :検索ボックスを生成
+    <%= telephone_field_tag name[,value[,opts]] %>       :電話番号入力ボックスを生成
+    <%= url_field_tag name[,value[,opts]] %>                   :URL入力ボックスを生成
+    <%= text_area_tag name[,content[,opts]] %>              :テキストエリアを生成
+    <%= radio_button_tag name, value[,[checked = false [,opts]] %>         :ラジオボタンを生成
+    <%= check_box_tag name, [,value = "1" [,checked = false [,opts]]] %>:チェックボックスを生成
+
+
+
+
 ### 用語
 
     FormTagヘルパー
@@ -92,4 +150,3 @@ form_forメソッド: モデルを編集するためのフォームを生成す�
 
 
 
-    
