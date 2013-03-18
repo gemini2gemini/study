@@ -17,4 +17,8 @@ class HelloController < ApplicationController
   	render :text => Railbook::Application.config.author
   end
 
+  def keyword
+    
+  end
+
 end

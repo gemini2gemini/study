@@ -1,0 +1,7 @@
+<%= form_tag({controller: "keyword", action: "search"},{id: "fm", class: "search"}) do %>
+検索キーワード：
+<%= text_field_tag "keywd","",{size: 30} %>
+<%= submit_tag "検索" %>
+<% end %>
+
+
