@@ -117,6 +117,12 @@ renderメソッド：　指定したRHTMLを返す
     render "form"
     :partial => の部分は冗長なだけなので省略が可能
 
+    テンプレートを呼び出して表示
+    render :template => "コントローラ名/アクション名"
+    render :template => "user/show"
+    render "user/show"
+    :template => の部分は冗長なだけなので省略が可能
+
 
 
 matchメソッド：　アクセス可能なURLを指定することで、HTMLリクエストを処理
