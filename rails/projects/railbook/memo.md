@@ -281,8 +281,11 @@ destroyメソッド
 form_tagメソッド：汎用的なフォームを出力する
 
     前提となるモデルが存在しない汎用的なフォーム(検索フォームなど)の生成に利用
+    form_tagメソッド配下では、モデルに関連づかないFormTagヘルパーを利用することが推奨される
+    
     <%= form_tag(リンク先 [オプション]) do %>
     <% end %>
+
 
     <%= form_tag({controller: "keyword", action: "search"},{id: "fm", class: "search"}) do %>
     検索キーワード：
