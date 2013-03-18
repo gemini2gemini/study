@@ -18,7 +18,10 @@ class HelloController < ApplicationController
   end
 
   def keyword
-    
+  end
+
+  def form_tag
+    @book = Book.new
   end
 
 end
