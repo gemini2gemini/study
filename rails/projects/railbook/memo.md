@@ -102,12 +102,15 @@ renderメソッド：　指定したRHTMLを返す
 
     他のアクションのテンプレート表示
     render :action => アクション名
+    render action: アクション名
 
     文字列を直接表示
     render :text => "文字列"
+    render text: "文字列"
 
     指定されたテキストを表示し、コンテンツタイプをapplication/xmlに設定
     render :json => モデルor文字列
+    render json: モデルor文字列
 
     部分テンプレートを呼び出して表示
     render :partial => "form"
