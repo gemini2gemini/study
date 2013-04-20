@@ -18,7 +18,7 @@
 
     gem list  //インストール済みのgemの一覧が表示される（使用しているrubyのバージョンごとに）
     gem uninstall ●●●●  //gem パッケージのアンインストール
-    gem update ●●●●  //gem パッケージの更新
+    gem update ●●●●  //gem パッケージの更新（パッケージ名を付けないとそのrubyに入っている全てのパッケージをupdate）
     gem cleanup ●●●●  //gem パッケージの削除（最新バージョンのみ残す）
     gem which ●●●●  //パッケージのインストール先を確認
 
