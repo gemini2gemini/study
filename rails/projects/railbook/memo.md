@@ -176,12 +176,20 @@ link_toメソッド
     <%= link_to "編集", edit_book_path(book) %>
     <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
 
+    オブジェクトによるパス表記
+    bookは、eachメソッドでテンプレート変数 @booksから取り出された個別の要素：Bookオブジェクトになるため、  
+    link_toメソッドのリンク先ににモデルオブジェクトが渡された場合、Railsはオブジェクトを一意に表す値　book.id　を取得する。
+    book    = book.id  →　/books/:id
+    
     特殊なパス表記(ビューヘルパーによる)
     books_path          →  /books
     book_path(id)       →  /books/:id
     new_book_path       →  /books/new
     edit_book_path(id)  →  /books/:id/edit
 
+    ゆえに、
+    例）edit_book_path(book) →　/books/book.id/edit
+    となる。
 
 findメソッド
 
