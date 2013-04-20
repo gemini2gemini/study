@@ -13,4 +13,12 @@
     rvm gemset list  //使用しているgemsetのリスト表示
     rvm gemset create ●●●●  //好きなgemsetのリストを作成する　●●●●に好きなリスト名を入れる
     rvm gemset use ●●●●  //好きなgemsetを使用する
-    gem list  //現在使用しているgemの一覧が表示される
+
+## gem コマンド
+
+    gem list  //インストール済みのgemの一覧が表示される（使用しているrubyのバージョンごとに）
+    gem uninstall ●●●●  //gem パッケージのアンインストール
+    gem update ●●●●  //gem パッケージの更新
+    gem cleanup ●●●●  //gem パッケージの削除（最新バージョンのみ残す）
+    gem which ●●●●  //パッケージのインストール先を確認
+
