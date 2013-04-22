@@ -28,3 +28,10 @@
     gem cleanup ●●●●  //gem パッケージの削除（最新バージョンのみ残す）
     gem which ●●●●  //パッケージのインストール先を確認
 
+## bundle installコマンド
+
+    Gemfileに記述されている内容に基づいて、必要なgemパッケージを「bundle install」でインストールする。
+    bundle install実施後、Gemfile.lockというファイルが生成される。
+    他の環境で同じアプリケーションの開発を行なう場合は、プログラムファイルに加えてこの「Gemfile.lock」ファイルを配布し、「bundle install」を実施することで、指定されたパッケージがインストールされる。
+
+
