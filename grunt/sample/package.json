@@ -1,0 +1,21 @@
+{
+  "name": "sample",
+  "version": "0.0.0",
+  "description": "sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"hello\""
+  },
+  "repository": "",
+  "keywords": [
+    "sample"
+  ],
+  "author": "taisuke",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-livereload": "~0.1.2"
+  }
+}
