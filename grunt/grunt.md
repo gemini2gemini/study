@@ -46,3 +46,11 @@ gruntのinstall　及び　package.jsonへの追記
 
 ## Gruntfile.jsの設定方法
 
+準備 -- 定型文の記述
+
+    module.exports = function(grunt) {
+      grunt.initConfig({
+  
+      });
+    };
+
