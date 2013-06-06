@@ -233,6 +233,22 @@
     例）git mv log/hoge.txt tmp/hoge.txt
 
 
+## コミットに印をつける
+
+    タグをつける
+    git tag <tag name>
+
+    タグを調べる
+    git tag
+
+    特定のコミットにタグをつける（後でタグをつける）
+    git tag <tag name> <commit id>
+
+    タグを削除する
+    git tag -d <tag name>
+
+
+
 ## gitの管理下から外す場合
 
 ### .gitignoreファイルの使い方
