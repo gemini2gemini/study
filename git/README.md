@@ -260,11 +260,21 @@
     log/*
 
 
-
-
 ## gitの設定変更メモ
 
 ### terminalの出力への色づけ方法
 すべてをターミナルのデフォルト色設定にまかせる場合
 
     git config --global color.ui true
+
+
+### git のコマンドに短縮名（エイリアス）を付ける方法
+
+    エイリアス設定
+    git config --global alias.co checkout
+    git config --global alias.st status
+    git config --global alias.br branch
+    git config --global alias.ci commit
+    
+    登録したエイリアスの確認
+    git config -l
