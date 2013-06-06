@@ -85,6 +85,7 @@
 
     ステージされている変更と直近のコミットの内容を比較
     git diff --staged
+    git diff --cached
 
     commit1とcommit2の差分を表示
     git diff commit1 commit2
@@ -123,6 +124,8 @@
 
     変更点の表示
     git blame hoge.txt
+
+
 
 
 ### コミットID、ブランチ名、タグ名などのコミット内容を表示する
@@ -188,6 +191,40 @@
 
     git resetコマンドは、実行前のHEADをORIG_HEADに保存するようになっている。間違ってgit resetコマンドを実行した場合には、このORIG_HEADを使えば戻せる。
     git reset --head ORIG_HEAD
+
+### 直前にしたコミットをやり直す
+    
+    コミットをした後で、追加で少しだけ修正がしたくなった場合に、直前にしたコミットをやり直す方法
+    git commit --amend
+    1. git add 追加ファイル
+    2. git commit --amend
+
+## ファイルの削除、移動
+
+### 削除
+
+    gitの管理下に置かれたファイルを削除する
+    git rm 削除するファイル名
+    例）git rm hoge.txt
+
+### 移動・名前変更
+
+    gitの管理下に置かれたファイルの移動・名前変更
+    git mv 移動元 移動先
+    例）git mv log/hoge.txt tmp/hoge.txt
+
+
+## gitの管理下から外す場合
+
+### .gitignoreファイルの使い方
+
+    .gitignoreファイルに、gitの管理下から外すファイルを記述する。
+    .gitignoreファイルは、置かれているのと同じ階層及びその下位階層のみ有効に働く。
+    例）.gitignore
+    tmp/*
+    log/*
+
+
 
 
 ## gitの設定変更メモ
