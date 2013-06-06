@@ -126,8 +126,6 @@
     git blame hoge.txt
 
 
-
-
 ### コミットID、ブランチ名、タグ名などのコミット内容を表示する
 
     コミット内容を表示
@@ -137,7 +135,10 @@
     git show $id:file.txt
 
 
-### ブランチ一覧を見る
+### ブランチの作成・操作
+
+    ブランチの作成
+    git branch <branch name>
 
     ローカルブランチを見る
     git branch
@@ -147,6 +148,24 @@
 
     ローカル・リモートブランチ両方を見る
     git branch -a
+    
+    ブランチ名の変更
+    git branch -m <oldbranch> <newbranch>
+
+    ローカルブランチの削除
+    git branch -d 削除するブランチ名
+    例）git branch -d <branch name>
+
+    リモートブランチの削除
+    git push origin :<branch name>
+
+    ブランチの統合（マージ）
+    git merge <branch name> [opt]
+    [opt]  --no-ff オプションを付けると、fast-forwardなマージであってもマージコミットを作成
+    ブランチが存在したという情報を残したいときに有用なオプション
+    
+    1. ベースになるブランチに移動して（例: git checkout master）
+    2. 統合したいブランチを指定（例: git merge <branch name>)
 
 
 ## 修正
