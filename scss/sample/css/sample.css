@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/*
+このコメントは、cssに引き継がれる
+*/
+div {
+  width: 400px; }
+  div p {
+    width: 200px;
+    color: red;
+    font-size: 16px; }
+
+p {
+  font-weight: bold; }
+  p a {
+    text-decoration: underline; }
+    p a:hover {
+      color: red; }
+
+#main {
+  width: 800px;
+  font-size: 16px; }
+
+#main {
+  width: 600px; }
+
+#main {
+  background: url("../img/bg.png");
+  background: url("../img/bg.png"); }
+
+#main {
+  color: red; }
+
+#main {
+  color: #ffcccc; }
+
+#main {
+  color: red; }
+
+.fs10 {
+  font-size: 10px; }
+
+.fs11 {
+  font-size: 11px; }
+
+.fs12 {
+  font-size: 12px; }
+
+.fs13 {
+  font-size: 13px; }
+
+.fs14 {
+  font-size: 14px; }
+
+.bws10 {
+  border-width: 10px; }
+
+.bws11 {
+  border-width: 11px; }
+
+.bws12 {
+  border-width: 12px; }
+
+.bws13 {
+  border-width: 13px; }
+
+.bws14 {
+  border-width: 14px; }
+
+.cat-icon {
+  background: url("animal.png"); }
+
+.dog-icon {
+  background: url("animal.png"); }
+
+.tiger-icon {
+  background: url("animal.png"); }
+
+.grid {
+  float: left;
+  width: 85px; }
+
+.label {
+  font-size: 12px;
+  border-radius: 10px; }
+
+.msg, .errorMsg, .warningMsg {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 4px;
+  color: white; }
+
+.errorMsg {
+  background: red; }
+
+.warningMsg {
+  background: orange; }

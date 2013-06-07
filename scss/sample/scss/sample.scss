@@ -1,0 +1,124 @@
+@import "compass";
+
+/*
+このコメントは、cssに引き継がれる
+*/
+
+//このコメントスタイルは、引き継がれない
+
+$baseFontSize: 16px;
+$baseSiteWidth: 800;
+$brandColor: red;
+$imgDir: "../img/";
+$debugMode: true;
+
+
+div {
+    width:400px;
+    p {
+        width:200px;
+        color:red;
+        font-size: $baseFontSize;
+    }
+}
+
+p {
+    font-weight: bold;
+    a {
+        text-decoration: underline;
+        &:hover{
+            color:red;
+        }
+    }
+}
+
+#main {
+    width: $baseSiteWidth + px;
+    font-size: $baseFontSize;
+}
+
+#main {
+    width: $baseSiteWidth - 200 + px;
+}
+
+#main {
+    background: url($imgDir + "bg.png");
+    background: url("#{$imgDir}bg.png");
+}
+
+#main {
+    color: $brandColor;
+}
+
+#main {
+    color:lighten($brandColor,40%);
+}
+
+#main {
+  @if $debugMode == true {
+        color: red;
+    } @else {
+        color :green;
+    }
+}
+
+@for $i from 10 through 14 {
+  .fs#{$i} { font-size: #{$i}px; }
+}
+
+
+$j:10;
+@while $j <= 14{
+    .bws#{$j} { border-width: #{$j}px; }
+    $j: $j + 1;
+}
+
+$animals: cat,dog,tiger;
+@each $animal in $animals {
+    .#{$animal}-icon{ background: url("#{animal}.png");}
+}
+
+
+// 関数
+$totalWidth: 940px;
+$columnCount: 10;
+
+@function getColumnWidth($width, $count) {
+    // $columnWidthを計算
+    $padding: 10px;
+    $columnWidth: floor(($width - ($padding * ($count - 1))) / $count);
+    @debug $columnWidth;
+    @return $columnWidth;
+}
+
+.grid {
+    float: left;
+    width: getColumnWidth($totalWidth, $columnCount);
+}
+
+
+@mixin round($radius:4px) {
+  border-radius: $radius;
+}
+
+.label {
+  font-size: 12px;
+  @include round(10px);
+}
+
+.msg {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 4px;
+    color: white;
+}
+
+.errorMsg {
+    @extend .msg;
+    background: red;
+}
+
+.warningMsg {
+    @extend .msg;
+    background: orange;
+}
