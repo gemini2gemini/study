@@ -11,6 +11,12 @@ body > section {
 body > section h2 {
   border-bottom: 1px solid #999999;
 }
+body > section > article > h3 {
+  margin-bottom: 0px;
+}
+body > section > article > h3 + p {
+  margin-top: 0px;
+}
 
 div.background-clip p {
   width: 400px;
@@ -45,4 +51,28 @@ div.background-origin p.border-box {
 }
 div.background-origin p.content-box {
   background-origin: content-box;
+}
+
+div.background-size p {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border: dashed 10px #000000;
+  background-image: url("../img/megastar3.jpg");
+  background-repeat: no-repeat;
+}
+div.background-size p.auto {
+  background-size: auto;
+}
+div.background-size p.contain {
+  background-size: contain;
+}
+div.background-size p.cover {
+  background-size: cover;
+}
+div.background-size p.size {
+  background-size: 10px 10px;
+}
+div.background-size p.per {
+  background-size: 50% auto;
 }
