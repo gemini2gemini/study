@@ -1,0 +1,75 @@
+@charset "UTF-8";
+body {
+  background: #cccccc;
+}
+body > section {
+  width: 800px;
+  margin: 5px auto;
+  padding: 0 20px;
+  border-left: 2px solid #eeeeee;
+  border-right: 2px solid #eeeeee;
+}
+body > section h2 {
+  border-bottom: 1px solid #999999;
+}
+body > section > article > h3 {
+  margin-bottom: 0;
+}
+body > section > article > h3 + p {
+  margin-top: 0;
+}
+
+/* background-clip指定 */
+div.background-clip p {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border: dashed 10px #000000;
+  background-image: url("../img/megastar3.jpg");
+}
+div.background-clip p.padding-box {
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+div.background-clip p.border-box {
+  -webkit-background-clip: border;
+  -moz-background-clip: border;
+  background-clip: border-box;
+}
+div.background-clip p.content-box {
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
+  background-clip: content-box;
+}
+
+/* background-origin指定*/
+div.background-origin p {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border: dashed 10px #000000;
+  background-image: url("../img/megastar3.jpg");
+  background-repeat: no-repeat;
+}
+div.background-origin p.content-box {
+  -webkit-background-origin: content;
+  -moz-background-origin: content;
+  -ms-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+}
+div.background-origin p.padding-box {
+  -webkit-background-origin: padding;
+  -moz-background-origin: padding;
+  -ms-background-origin: padding-box;
+  -o-background-origin: padding-box;
+  background-origin: padding-box;
+}
+div.background-origin p.border-box {
+  -webkit-background-origin: border;
+  -moz-background-origin: border;
+  -ms-background-origin: border-box;
+  -o-background-origin: border-box;
+  background-origin: border-box;
+}
