@@ -1,0 +1,60 @@
+@import "compass";
+
+body {
+    background: #cccccc;
+    > section {
+        width:800px;
+        margin: 5px auto;
+        padding: 0 20px;
+        border-left: 2px solid #eeeeee;
+        border-right: 2px solid #eeeeee;
+        h2 {
+            border-bottom: 1px solid #999999;
+        }
+        > article > h3{
+            margin-bottom: 0;
+            + p {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+/* background-clip指定 */
+div.background-clip {
+    p {
+        width:400px;
+        height:40px;
+        padding:10px;
+        border:dashed 10px #000000;
+        background-image:url("../img/megastar3.jpg");
+        &.padding-box{
+            @include background-clip();
+        }
+        &.border-box{
+            @include background-clip(border-box);
+        }
+        &.content-box{
+            @include background-clip(content-box);
+        }
+    }
+}
+
+/* background-origin指定*/
+div.background-origin {
+    p {
+        width:400px; height:40px; padding:10px;
+        border:dashed 10px #000000;
+        background-image:url("../img/megastar3.jpg");
+        background-repeat: no-repeat;
+        &.content-box{
+            @include background-origin();
+        }
+        &.padding-box{
+            @include background-origin(padding-box);
+        }
+        &.border-box{
+            @include background-origin(border-box)
+        }
+    }
+}

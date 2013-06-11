@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3サンプル</title>
+	<link rel="stylesheet" href="./css/sample.css">
+</head>
+<body>
+	<section>
+        <h2>CSS3</h2>
+		<article>
+			<h3>Background Clip</h3>
+			<p>background-clip()</p>
+		    <ul>
+			  <li>@include background-clip();//(padding-box = default)</li>
+		      <li>@include background-clip(border-box);</li>
+		      <li>@include background-clip(content-box);</li>
+		    </ul>
+		    <p>サンプル</p>
+		    <div class="background-clip">
+				<p class="padding-box">background-clip();</p>
+				<p class="border-box">background-clip(border-box);</p>
+				<p class="content-box">background-clip(content-box);</p>
+			</div>
+		</article>
+		<article>
+			<h3>Background Origin</h3>
+			<p>background-origin()</p>
+		    <ul>
+			  <li>@include background-origin();//(content-box = default)</li>
+		      <li>@include background-origin(padding-box);</li>
+		      <li>@include background-origin(border-box);</li>
+		    </ul>
+		    <p>サンプル</p>
+		    <div class="background-origin">
+		    	<p class="content-box">background-origin();</p>
+				<p class="padding-box">background-origin(padding-box);</p>
+				<p class="border-box">background-origin(border-box);</p>
+			</div>
+		</article>
+	</section>
+
+</body>
+</html>
