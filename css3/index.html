@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3サンプル</title>
+	<link rel="stylesheet" href="./css/sample.css">
+</head>
+<body>
+	<section>
+        <h2>Backgrounds and Borders</h2>
+		<article>
+			<h3>background-clip</h3>
+			<p>背景の適用範囲を指定できる</p>
+		    <ul>
+			  <li>background-clip:border-box;    //(default)</li>
+		      <li>background-clip:padding-box;</li>
+		      <li>background-clip:content-box;</li>
+		    </ul>
+		    <p>サンプル</p>
+		    <div class="background-clip">
+				<p class="border-box">background-clip:border-box;</p>
+				<p class="padding-box">background-clip:padding-box;</p>
+				<p class="content-box">background-clip:content-box;</p>
+			</div>
+		</article>
+		<article>
+			<h3>background-origin</h3>
+			<p>背景の基準位置を指定</p>
+		    <ul>
+			  <li>background-origin:padding-box;    //(default)</li>
+		      <li>background-origin:border-box;</li>
+		      <li>background-origin:content-box;</li>
+		    </ul>
+		    <p>サンプル</p>
+		    <div class="background-origin">
+				<p class="padding-box">background-origin:padding-box;</p>
+				<p class="border-box">background-origin:border-box;</p>
+				<p class="content-box">background-origin:content-box;</p>
+			</div>
+		</article>
+	</section>
+
+</body>
+</html>

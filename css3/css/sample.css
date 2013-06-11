@@ -1,0 +1,48 @@
+body {
+  background: #cccccc;
+}
+body > section {
+  width: 800px;
+  margin: 5px auto;
+  padding: 0 20px;
+  border-left: 2px solid #eeeeee;
+  border-right: 2px solid #eeeeee;
+}
+body > section h2 {
+  border-bottom: 1px solid #999999;
+}
+
+div.background-clip p {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border: dashed 10px #000000;
+  background-image: url("../img/megastar3.jpg");
+}
+div.background-clip p.border-box {
+  background-clip: border-box;
+}
+div.background-clip p.padding-box {
+  background-clip: padding-box;
+}
+div.background-clip p.content-box {
+  background-clip: content-box;
+}
+
+div.background-origin p {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border: dashed 10px #000000;
+  background-image: url("../img/megastar3.jpg");
+  background-repeat: no-repeat;
+}
+div.background-origin p.padding-box {
+  background-origin: padding-box;
+}
+div.background-origin p.border-box {
+  background-origin: border-box;
+}
+div.background-origin p.content-box {
+  background-origin: content-box;
+}

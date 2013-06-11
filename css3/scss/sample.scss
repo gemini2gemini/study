@@ -1,0 +1,55 @@
+@import "compass";
+
+body {
+    background: #cccccc;
+    > section {
+        width:800px;
+        margin: 5px auto;
+        padding: 0 20px;
+        border-left: 2px solid #eeeeee;
+        border-right: 2px solid #eeeeee;
+        h2 {
+            border-bottom: 1px solid #999999;
+        }
+    }
+}
+
+// background-clip指定
+div.background-clip {
+    p {
+        width:400px;
+        height:40px;
+        padding:10px;
+        border:dashed 10px #000000;
+        background-image:url("../img/megastar3.jpg");
+        &.border-box{
+            background-clip:border-box;
+        }
+        &.padding-box{
+            background-clip:padding-box;
+        }
+        &.content-box{
+            background-clip:content-box;
+        }
+    }
+}
+
+// background-origin指定
+div.background-origin {
+    p {
+        width:400px; height:40px; padding:10px;
+        border:dashed 10px #000000;
+        background-image:url("../img/megastar3.jpg");
+        background-repeat: no-repeat;
+        &.padding-box{
+            background-origin:padding-box;
+        }
+        &.border-box{
+            background-origin:border-box;
+        }
+        &.content-box{
+            background-origin:content-box;
+
+        }
+    }
+}
