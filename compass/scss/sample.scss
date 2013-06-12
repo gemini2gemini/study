@@ -58,3 +58,28 @@ div.background-origin {
         }
     }
 }
+
+/* background-size指定*/
+div.background-size {
+    p {
+        width:400px; height:40px; padding:10px;
+        border:dashed 10px #000000;
+        background-image:url("../img/megastar3.jpg");
+        background-repeat: no-repeat;
+        &.auto{
+            @include background-size(auto);
+        }
+        &.contain{
+            @include background-size(contain);
+        }
+        &.cover{
+            @include background-size(cover);
+        }
+        &.size{
+            @include background-size(10px 10px);
+        }
+        &.per{
+            @include background-size(50% auto);
+        }
+    }
+}

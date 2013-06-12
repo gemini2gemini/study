@@ -73,3 +73,43 @@ div.background-origin p.border-box {
   -o-background-origin: border-box;
   background-origin: border-box;
 }
+
+/* background-size指定*/
+div.background-size p {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border: dashed 10px #000000;
+  background-image: url("../img/megastar3.jpg");
+  background-repeat: no-repeat;
+}
+div.background-size p.auto {
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -o-background-size: auto;
+  background-size: auto;
+}
+div.background-size p.contain {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+div.background-size p.cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+div.background-size p.size {
+  -webkit-background-size: 10px 10px;
+  -moz-background-size: 10px 10px;
+  -o-background-size: 10px 10px;
+  background-size: 10px 10px;
+}
+div.background-size p.per {
+  -webkit-background-size: 50% auto;
+  -moz-background-size: 50% auto;
+  -o-background-size: 50% auto;
+  background-size: 50% auto;
+}
