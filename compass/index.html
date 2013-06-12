@@ -57,6 +57,28 @@
 				<p class="per">background-size(50%,auto);</p>
 			</div>
 		</article>
+		<article>
+			<h3>Border Radius</h3>
+			<p>border-radius();</p>
+		    <ul>
+			  <li>@include border-radius($radius, $vertical-radius);</li>
+			  <li>@include border-radius();//defautl = 5px</li>
+		      <li>@include border-radius(10px);</li>
+		      <li>@include border-radius(10px 20px);</li>
+		      <li>@include border-radius(10px 20px 30px);</li>
+		      <li>@include border-radius(10px 20px 30px 40px);</li>
+		      <li>@include border-radius(10px 20px 30px 40px, 40px 30px 20px 10px);</li>
+		    </ul>
+		    <p>サンプル</p>
+		    <div class="border-radius">
+		    	<p class="default">border-radius();</p>
+		    	<p class="right-top-omit">border-radius(40px);</p>
+		    	<p class="right-bottom-omit">border-radius(40px 20px);</p>
+				<p class="letf-bottom-omit">border-radius(40px 20px 30px);</p>
+				<p class="all-difference">border-radius(40px 20px 30px 10px);</p>
+				<p class="all-difference2">border-radius(10px 20px 30px 40px, 40px 30px 20px 10px);</p>
+			</div>
+		</article>
 	</section>
 </body>
 </html>

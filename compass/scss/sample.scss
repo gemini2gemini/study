@@ -83,3 +83,29 @@ div.background-size {
         }
     }
 }
+
+/* border-radius指定*/
+div.border-radius {
+    p {
+        width:400px; height:40px; padding:10px;
+        border:solid 10px #000000;
+        &.default{
+            @include border-radius();
+        }
+        &.right-top-omit{
+            @include border-radius(40px);
+        }
+        &.right-bottom-omit{
+            @include border-radius(40px 20px);
+        }
+        &.letf-bottom-omit{
+            @include border-radius(40px 20px 30px);
+        }
+        &.all-difference{
+            @include border-radius(40px 20px 30px 10px);
+        }
+        &.all-difference2{
+            @include border-radius(10px 20px 30px 40px, 40px 30px 20px 10px);
+        }
+    }
+}

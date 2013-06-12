@@ -113,3 +113,51 @@ div.background-size p.per {
   -o-background-size: 50% auto;
   background-size: 50% auto;
 }
+
+/* border-radius指定*/
+div.border-radius p {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border: solid 10px #000000;
+}
+div.border-radius p.default {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+div.border-radius p.right-top-omit {
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+}
+div.border-radius p.right-bottom-omit {
+  -webkit-border-radius: 40px 20px;
+  -moz-border-radius: 40px 20px;
+  -ms-border-radius: 40px 20px;
+  -o-border-radius: 40px 20px;
+  border-radius: 40px 20px;
+}
+div.border-radius p.letf-bottom-omit {
+  -webkit-border-radius: 40px 20px 30px;
+  -moz-border-radius: 40px 20px 30px;
+  -ms-border-radius: 40px 20px 30px;
+  -o-border-radius: 40px 20px 30px;
+  border-radius: 40px 20px 30px;
+}
+div.border-radius p.all-difference {
+  -webkit-border-radius: 40px 20px 30px 10px;
+  -moz-border-radius: 40px 20px 30px 10px;
+  -ms-border-radius: 40px 20px 30px 10px;
+  -o-border-radius: 40px 20px 30px 10px;
+  border-radius: 40px 20px 30px 10px;
+}
+div.border-radius p.all-difference2 {
+  -webkit-border-radius: 10px 40px;
+  -moz-border-radius: 10px 20px 30px 40px / 40px 30px 20px 10px;
+  border-radius: 10px 20px 30px 40px / 40px 30px 20px 10px;
+}
