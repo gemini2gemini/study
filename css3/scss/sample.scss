@@ -84,3 +84,47 @@ div.background-size {
         }
     }
 }
+
+
+// background-origin指定
+div.border-radius {
+    p {
+        width:400px; height:60px; padding:10px;
+        border:solid 20px #000000;
+        backguroud-color: #000000;
+        &.same{
+            border-radius:20px;
+        }
+        &.all-difference{
+            border-radius:40px 100px 30px 15px / 50px 30px 75px 65px;
+        }
+        &.letf-bottom-omit{
+            border-radius:60px 100px 30px;
+        }
+        &.right-bottom-omit{
+            border-radius:30px 140px;
+        }
+        &.right-top-omit{
+            border-radius:100px / 80px 320px 160px 240px;
+        }
+    }
+}
+
+p.circle {
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+    padding: 0px;
+    background: #fff;
+    color: #3F2F69;
+    font-size: 20px;
+    line-height: 120px;
+    text-align: center;
+    border-width: 10px;
+    border-style: solid;
+    border-top-color: #ECACB5;
+    border-right-color: #97D3E3;
+    border-bottom-color: #DFECAA;
+    border-left-color: #AEC1E3;
+    border-radius: 50%;
+}
