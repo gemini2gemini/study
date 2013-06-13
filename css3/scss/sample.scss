@@ -86,7 +86,7 @@ div.background-size {
 }
 
 
-// background-origin指定
+// border-radius指定
 div.border-radius {
     p {
         width:400px; height:60px; padding:10px;
@@ -95,17 +95,17 @@ div.border-radius {
         &.same{
             border-radius:20px;
         }
-        &.all-difference{
-            border-radius:40px 100px 30px 15px / 50px 30px 75px 65px;
-        }
-        &.letf-bottom-omit{
-            border-radius:60px 100px 30px;
+        &.right-top-omit{
+            border-radius:100px / 80px 320px 160px 240px;
         }
         &.right-bottom-omit{
             border-radius:30px 140px;
         }
-        &.right-top-omit{
-            border-radius:100px / 80px 320px 160px 240px;
+        &.letf-bottom-omit{
+            border-radius:60px 100px 30px;
+        }
+        &.all-difference{
+            border-radius:40px 100px 30px 15px / 50px 30px 75px 65px;
         }
     }
 }
