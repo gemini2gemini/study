@@ -109,3 +109,38 @@ div.border-radius {
         }
     }
 }
+
+
+/* box-shadow指定*/
+div.box-shadow {
+    p {
+        width:400px;
+        height:45px;
+        padding:10px;
+        margin: 40px 0 0 0;
+        border:1px solid #000000;
+        backguroud-color: #dddddd;
+        &.default{
+            @include box-shadow();
+        }
+        &.shadow1{
+            @include box-shadow(20px 20px);
+        }
+        &.shadow2{
+            @include box-shadow(20px 20px 20px);
+        }
+        &.shadow3{
+            @include box-shadow(20px 20px 20px 10px);
+        }
+        &.shadow4{
+            @include box-shadow(rgba(255,0,0,0.5) 20px 20px 20px 10px);
+        }
+        &.shadow5{
+            @include box-shadow(20px 20px 20px 10px rgba(255,0,0,0.5) inset);
+        }
+    }
+}
+
+
+
+

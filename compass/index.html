@@ -79,6 +79,28 @@
 				<p class="all-difference2">border-radius(10px 20px 30px 40px, 40px 30px 20px 10px);</p>
 			</div>
 		</article>
+		<article>
+			<h3>Box Shadow</h3>
+			<p>box-shadow();</p>
+		    <ul>
+			  <li>@include box-shadow($h-offset,$v-offset,$blur-length,$spread-length,$color,$inset);</li>
+			  <li>@include box-shadow();//0px 0px 5px #333333;</li>
+		      <li>@include box-shadow(20px 20px);</li>
+		      <li>@include box-shadow(20px 20px 20px);</li>
+		      <li>@include box-shadow(20px 20px 20px 10px);</li>
+		      <li>@include box-shadow(20px 20px 20px 10px rgba(255,0,0,0.5));</li>
+		      <li>@include box-shadow(20px 20px 20px 10px rgba(255,0,0,0.5) inset);</li>
+		    </ul>
+		    <p>サンプル</p>
+		    <div class="box-shadow">
+		    	<p class="default">box-shadow();//0px 0px 5px #333333;</p>
+		    	<p class="shadow1">box-shadow(20px 20px);</p>
+		    	<p class="shadow2">box-shadow(20px 20px 20px);</p>
+				<p class="shadow3">box-shadow(20px 20px 20px 10px);</p>
+				<p class="shadow4">box-shadow(20px 20px 20px 10px rgba(255,0,0,0.5));</p>
+				<p class="shadow5">box-shadow(20px 20px 20px 10px rgba(255,0,0,0.5) inset);</p>
+			</div>
+		</article>
 	</section>
 </body>
 </html>
