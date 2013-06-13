@@ -128,3 +128,26 @@ p.circle {
     border-left-color: #AEC1E3;
     border-radius: 50%;
 }
+
+// box-shadow指定
+div.box-shadow {
+    p {
+        width:400px; height:60px; padding:10px;
+        backguroud-color: #dddddd;
+        &.shadow1{
+            box-shadow:10px 10px;
+        }
+        &.shadow2{
+            box-shadow:10px 10px 10px;
+        }
+        &.shadow3{
+            box-shadow:10px 10px 10px 10px;
+        }
+        &.shadow4{
+            box-shadow:10px 10px 10px 10px rgba(255,0,0,0.5);
+        }
+        &.shadow5{
+            box-shadow:10px 10px 10px 10px rgba(255,0,0,0.5) inset;
+        }
+    }
+}

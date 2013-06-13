@@ -87,17 +87,17 @@ div.border-radius p {
 div.border-radius p.same {
   border-radius: 20px;
 }
-div.border-radius p.all-difference {
-  border-radius: 40px 100px 30px 15px / 50px 30px 75px 65px;
-}
-div.border-radius p.letf-bottom-omit {
-  border-radius: 60px 100px 30px;
+div.border-radius p.right-top-omit {
+  border-radius: 100px / 80px 320px 160px 240px;
 }
 div.border-radius p.right-bottom-omit {
   border-radius: 30px 140px;
 }
-div.border-radius p.right-top-omit {
-  border-radius: 100px / 80px 320px 160px 240px;
+div.border-radius p.letf-bottom-omit {
+  border-radius: 60px 100px 30px;
+}
+div.border-radius p.all-difference {
+  border-radius: 40px 100px 30px 15px / 50px 30px 75px 65px;
 }
 
 p.circle {
@@ -117,4 +117,28 @@ p.circle {
   border-bottom-color: #DFECAA;
   border-left-color: #AEC1E3;
   border-radius: 50%;
+}
+
+div.box-shadow p {
+  width: 400px;
+  height: 45px;
+  margin: 40px 0 0 0;
+  padding: 10px;
+  border:1px solid #000000;
+  backguroud-color: #dddddd;
+}
+div.box-shadow p.shadow1 {
+  box-shadow: 20px 20px;
+}
+div.box-shadow p.shadow2 {
+  box-shadow: 20px 20px 20px;
+}
+div.box-shadow p.shadow3 {
+  box-shadow: 20px 20px 20px 10px;
+}
+div.box-shadow p.shadow4 {
+  box-shadow: 20px 20px 20px 10px rgba(255, 0, 0, 0.5);
+}
+div.box-shadow p.shadow5 {
+  box-shadow: 20px 20px 20px 10px rgba(255, 0, 0, 0.5) inset;
 }
