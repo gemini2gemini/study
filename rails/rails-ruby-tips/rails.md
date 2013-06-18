@@ -3,17 +3,17 @@
 ## アプリケーション作成の勉強
 
 ### railsコマンド
-    
-アプリケーションの新規作成  
+
+アプリケーションの新規作成
 
     rails new appName
-  
 
-HTTPサーバーの起動  
+
+HTTPサーバーの起動
 
     rails server [options]
     rails s [options]
-    
+
     options
     -e : 特定の環境(test,development,production)でサーバーを起動(デフォルトはdevelopment)
     -p : 使用するポート番号
@@ -89,7 +89,7 @@ Scaffoldの作成
     指定するテーブルのスキーマを表示
 
 ツールの終了
-    
+
     .quit
     .exit
     SQLiteクライアントを終了する
@@ -128,7 +128,7 @@ renderメソッド：　指定したRHTMLを返す
 matchメソッド：　アクセス可能なURLを指定することで、HTMLリクエストを処理
 
     match(URLパターン [, オプション])
-    
+
     match ":controller(/:action(/:id(.format)))"
     以下と一致
     http://localhost:3000/books
@@ -172,15 +172,15 @@ link_toメソッド
 
     リンクを生成するメソッド
     link_to(文字列, パス [, オプション, HTMLオプション])
-    
+
     <%= link_to "編集", edit_book_path(book) %>
     <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
 
     オブジェクトによるパス表記
-    bookは、eachメソッドでテンプレート変数 @booksから取り出された個別の要素：Bookオブジェクトになるため、  
+    bookは、eachメソッドでテンプレート変数 @booksから取り出された個別の要素：Bookオブジェクトになるため、
     link_toメソッドのリンク先ににモデルオブジェクトが渡された場合、Railsはオブジェクトを一意に表す値　book.id　を取得する。
     book    = book.id  →　/books/:id
-    
+
     特殊なパス表記(ビューヘルパーによる)
     books_path          →  /books
     book_path(id)       →  /books/:id
@@ -200,12 +200,12 @@ findメソッド
 
     例）
     @book =Book.find(params[:id])
-    
+
 
 paramsメソッド
 
     URLから送られてきた値やフォームで入力した値をparams[:パラメータ名]で取得する
-    
+
     ・リンクによるパラメータの受け渡し
     ・フォームによるパタメータの受け渡し
     ・日本語も自動的にデコード
@@ -284,7 +284,7 @@ destroyメソッド
     @book.destroy
 
 
-    
+
 
 ### 用語
 
@@ -326,13 +326,13 @@ O/R(Object/Relationnal)マッパー
 ### 規則
 
 テンプレートファイルの命名・作成場所
-    
-    /app/views/ フォルダ配下に、「コントローラー名/アクション名.html.erb」という名前で作成する  
+
+    /app/views/ フォルダ配下に、「コントローラー名/アクション名.html.erb」という名前で作成する
 
 
 ### Tips
 
-マジックコメントの指定(マルチバイト文字対策)  
+マジックコメントの指定(マルチバイト文字対策)
 以下の一行を、スクリプトファイルの先頭に記載する
 
     # coding: utf-8
@@ -380,7 +380,7 @@ O/R(Object/Relationnal)マッパー
 
     :(コロン)から始まる英数字の文字列をシンボルと呼ぶ
     シンボルは変数名やメソッド名などを表すデータ。
-    
+
     :name => "Japan", :address => "tokyo"
 
     シンボルをキーとするハッシュは、Ruby1.9からは、以下のようにも書ける
@@ -393,7 +393,7 @@ O/R(Object/Relationnal)マッパー
 
     [action]_[resource]_path
     [action]_[resource]_url
-    というルールでメソッドが生成される 
+    というルールでメソッドが生成される
 
 
 

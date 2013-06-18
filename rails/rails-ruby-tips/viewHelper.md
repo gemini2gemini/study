@@ -47,7 +47,7 @@ form_forメソッド: モデルを編集するためのフォームを生成す�
     <%= f.label :isbn %>
     <%= f.text_filed :isbn %>
 
-    
+
     <%= form_for(@book) do |f| %>
       <div class="filed">
         <%= f.label :isbn %><br />
