@@ -9,5 +9,6 @@ Markdown記法について自分のためのメモ
 ## Scss記法
 Scss記法について自分のためのメモ
 
-## Hnix/sshコマンド
+
+## Unix/sshコマンド
 Unix/sshコマンドについて自分のためのメモ
