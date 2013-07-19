@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>calculator</title>
+	<script src="../common.js"></script>
+	<script src="./calculator.js"></script>
+	<style>
+		body > div {
+			width: 300px;
+			border: 1px solid #000000;
+			margin: 20px auto 0;
+		}
+		body > div > form > div {
+			margin-top: 15px;
+		}
+		label {
+			margin-left: 10px;
+		}
+		input[type="text"],input[type="number"] {
+			width: 200px;
+			margin-left: 10px;
+			background-color: #efefef;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid #999999;
+		}
+		input[type="submit"] {
+			margin-left: 10px;
+			width: 100px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<div>
+<form action="" id="theForm">
+	<div>
+		<label for="quantity">注文数</label><br />
+		<input type="number" name="quantity" id="quantity" value="1" min="1" required>
+	</div>
+	<div>
+		<label for="price">単価</label><br />
+		<input type="text" name="price" id="price" value="1.00" required>
+	</div>
+	<div>
+		<label for="tax">税率(%)</label><br />
+		<input type="text" name="tax" id="tax" value="0.0" required>
+	</div>
+	<div>
+		<label for="discount">値引額</label><br />
+		<input type="text" name="discount" id="discount" value="0.0" required>
+	</div>
+	<div>
+		<label for="total">合計</label><br />
+		<input type="text" name="total" id="total" disabled>
+	</div>
+	<div>
+		<input type="submit" value="計算" id="submit">
+	</div>
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>tasks</title>
+	<script src="../common2.js"></script>
+	<script src="./tasks.js"></script>
+	<style>
+		body > form {
+			width: 500px;
+			margin: 20px auto 0;
+		}
+
+	</style>
+</head>
+<body>
+	<form action="#" method="post" id="theForm">
+		<fieldset>
+			<legend>今日終わらせることを入力する</legend>
+			<div>
+				<label for="task">やること</label><br />
+				<input type="text" name="task" id="task" required>
+			</div>
+			<div>
+				<input type="submit" value="追加" id="submit">
+			</div>
+			<div id="output"></div>
+			<ol id="todo">
+			</ol>
+		</fieldset>
+	</form>
+</body>
+</html>

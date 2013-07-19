@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>イベントの報告</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <!-- Script 8.7 - events.html -->
+    <form action="#" method="post" id="theForm">
+        <fieldset><legend>イベントの報告</legend>
+            <p>監視するイベントを選択してください。</p>
+            <div><label for="mouseover">mouseover</label><input type="checkbox" name="mouseover" id="mouseover" value="mouseover"></div>
+            <div><label for="mouseout">mouseout</label><input type="checkbox" name="mouseout" id="mouseout" value="mouseout"></div>
+            <div><label for="click">click</label><input type="checkbox" name="click" id="click" value="click"></div>
+            <div><label for="keypress">keypress</label><input type="checkbox" name="keypress" id="keypress" value="keypress"></div>
+            <div><label for="blur">blur</label><input type="checkbox" name="blur" id="blur" value="blur"></div>
+            <div><input type="submit" value="送信" id="submit"></div>
+            <div><label for="output">出力</label><textarea name="output" id="output" disabled></textarea></div>
+        </fieldset>
+    </form>
+    <script src="../common2.js"></script>
+    <script src="./events.js"></script>
+</body>
+</html>

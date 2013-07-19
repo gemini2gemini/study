@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>contact</title>
+	<script src="../common.js"></script>
+	<script src="./contact.js"></script>
+	<style>
+		body > div {
+			width: 300px;
+			border: 1px solid #000000;
+			margin: 20px auto 0;
+		}
+		body > div > form > div {
+			margin-top: 15px;
+		}
+		label {
+			margin-left: 10px;
+		}
+		textarea {
+			height: 200px;
+		}
+		textarea, input[type="text"], input[type="number"], input[type="email"] {
+			width: 200px;
+			margin-left: 10px;
+			background-color: #efefef;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid #999999;
+		}
+		select {
+			margin-left: 10px;
+			width: 200px;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid #999999;
+		}
+		input[type="submit"] {
+			margin-left: 10px;
+			width: 100px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<div>
+<form action="" id="theForm">
+
+	<div>
+		<label for="email">メールアドレス</label><br />
+		<input type="email" name="email" id="email" required>
+	</div>
+	<div>
+		<label for="comments">コメント</label><br />
+		<textarea type="text" name="comments" id="comments" required></textarea>
+	</div>
+	<div>
+		<input type="submit" value="送信" id="submit">
+	</div>
+</form>
+</div>
+
+</body>
+</html>

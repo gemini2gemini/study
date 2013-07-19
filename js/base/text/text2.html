@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>text</title>
+	<script src="../common2.js"></script>
+	<script src="./text2.js"></script>
+	<style>
+		body > div {
+			width: 300px;
+			border: 1px solid #000000;
+			margin: 20px auto 0;
+		}
+		body > div > form > div {
+			margin-top: 15px;
+		}
+		label {
+			margin-left: 10px;
+		}
+		textarea {
+			height: 200px;
+		}
+		textarea, input[type="text"], input[type="number"] {
+			width: 200px;
+			margin-left: 10px;
+			margin-bottom: 10px;
+			background-color: #efefef;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid #999999;
+		}
+		input[type="submit"] {
+			margin-left: 10px;
+			width: 100px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<div>
+<form action="" id="theForm">
+	<div>
+		<label for="comments">コメント</label><br />
+		<textarea name="comments" id="comments" maxlength="100" required></textarea>
+	</div>
+	<div>
+		<label for="count">文字数</label><br />
+		<input type="number" name="count" id="count" disabled>
+	</div>
+</form>
+</div>
+
+</body>
+</html>

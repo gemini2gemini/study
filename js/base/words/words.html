@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>random</title>
+	<script src="../common.js"></script>
+	<script src="./words.js"></script>
+	<style>
+		body > div {
+			width: 300px;
+			border: 1px solid #000000;
+			margin: 20px auto 0;
+		}
+		input[type="text"] {
+			width: 200px;
+			margin: 20px 0 0 20px;
+			background-color: #efefef;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid #999999;
+		}
+		input[type="submit"] {
+			margin-left: 55px;
+			width: 100px;
+			margin-bottom: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<form action="" id="theForm">
+			<div>
+				<label for="words">単語</label>
+				<input type="text" name="words" id="words" required>
+			</div>
+			<input type="submit" value="ソート" id="submit">
+			<h2>ソート結果</h2>
+			<div id="output"></div>
+		</form>
+    </div>
+</body>
+</html>

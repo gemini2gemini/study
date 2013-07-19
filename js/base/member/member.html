@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>member</title>
+	<script src="../common.js"></script>
+	<script src="./member.js"></script>
+	<style>
+		body > div {
+			width: 300px;
+			border: 1px solid #000000;
+			margin: 20px auto 0;
+		}
+		body > div > form > div {
+			margin-top: 15px;
+		}
+		label {
+			margin-left: 10px;
+		}
+		textarea {
+			height: 200px;
+		}
+		textarea, input[type="text"], input[type="number"] {
+			width: 200px;
+			margin-left: 10px;
+			background-color: #efefef;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid #999999;
+		}
+		select {
+			margin-left: 10px;
+			width: 200px;
+			height: 20px;
+			border-radius: 5px;
+			border: 1px solid #999999;
+		}
+		input[type="submit"] {
+			margin-left: 10px;
+			width: 100px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<div>
+<form action="" id="theForm">
+	<div>
+		<label>種類</label><br />
+		<select name="type" id="type">
+			<option value="basic">ベーシック - $10.00</option>
+			<option value="premium">プレミアム - $15.00</option>
+			<option value="gold">ゴールド - $20.00</option>
+			<option value="platinum">プラチナ - $25.00</option>
+		</select>
+	</div>
+	<div>
+		<label for="years">年</label><br />
+		<input type="number" name="years" id="years" min="1" required>
+	</div>
+	<div>
+		<label for="cost">金額</label><br />
+		<input type="text" name="cost" id="cost" disabled>
+	</div>
+	<div>
+		<input type="submit" value="計算" id="submit">
+	</div>
+</form>
+</div>
+
+</body>
+</html>

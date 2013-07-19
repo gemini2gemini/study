@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>os</title>
+	<script src="../common2.js"></script>
+	<script src="./os.js"></script>
+	<style>
+
+
+	</style>
+</head>
+<body>
+	<form action="#" method="post" id="theForm">
+        <fieldset><legend>お使いのOSを選択してください。</legend>
+			<div><label for="os">OS</label>
+				<select name="os" id="os">
+				    <option>選択</option>
+				    <optgroup label="Windows">
+				        <option value="7 Home Basic">7 Home Basic</option>
+				        <option value="7 Home Premium">7 Home Premium</option>
+				        <option value="7 Professional">7 Professional</option>
+				        <option value="7 Ultimate">7 Ultimate</option>
+				        <option value="Vista">Vista</option>
+				        <option value="XP">XP</option>
+				    </optgroup>
+				    <optgroup label="Mac OS X">
+				        <option value="10.7 Lion">10.7 Lion</option>
+				        <option value="10.6 Snow Leopard">10.7 Snow Leopard</option>
+				        <option value="10.5 Leopard">Leopard</option>
+				        <option value="10.4 Tiger">Tiger</option>
+				    </optgroup>
+		    	</select>
+	        </div>
+            <input type="submit" value="送信" id="submit">
+        </fieldset>
+        <div id="output"></div>
+    </form>
+</body>
+</html>
