@@ -4,18 +4,17 @@
 
 ### 既存のデータから作成
 
-1. 既存のデータがあるフォルダに移動する
-2. リポジトリを初期化する
-3. `git init`
-4. 既存のデータを addする
-5. `git add .`
+1. github に新しいリポジトリ作成
+2. 既存のデータがあるフォルダに移動する
+3. ローカルリポジトリを初期化する `git init`
+4. リモートリポジトリに接続 `git remote add origin git@github.com:reponame/test.git`
+5. 既存のデータを addする   `git add .`
+6. `git push origin master`
 
 ### 既存のリポジトリから作成
 
-1. 既存のリポジトリの urlを取得
-2. `git clone [url]`
-3. 別の名前のディレクトリに作成したい場合
-4. `git clone [url] othername`
+1. 既存のリポジトリの urlを取得 `git clone [url]`
+2. 別の名前のディレクトリに作成したい場合 `git clone [url] othername`
 
 
 ## gitの基礎概念（ファイルの状態／ファイルが置かれている位置）
@@ -92,7 +91,20 @@
 
     HEADとworking directoryとの差分を表示
     git diff HEAD
-     
+
+
+### コミット
+
+    バージョン管理しているファイルの全変更をコミットする(add省略)
+    git commit -a
+
+    直前のコミットをやり直す
+    git commit --amend
+
+    コミットメッセージを直接指定する
+    git commit -m "message"
+
+
 ### コミットの履歴を表示する
 
     コミットされた履歴を表示する(日付・著者・タイトル・メッセージ）
@@ -140,6 +152,12 @@
     ブランチの作成
     git branch <branch name>
 
+    ブランチを作成してすぐに移動
+    git checkout -b <branch name>
+
+    ブランチの移動
+    git checkout <branch name>
+
     ローカルブランチを見る
     git branch
 
@@ -148,7 +166,7 @@
 
     ローカル・リモートブランチ両方を見る
     git branch -a
-    
+
     ブランチ名の変更
     git branch -m <oldbranch> <newbranch>
 
@@ -163,7 +181,7 @@
     git merge <branch name> [opt]
     [opt]  --no-ff オプションを付けると、fast-forwardなマージであってもマージコミットを作成
     ブランチが存在したという情報を残したいときに有用なオプション
-    
+
     1. ベースになるブランチに移動して（例: git checkout master）
     2. 統合したいブランチを指定（例: git merge <branch name>)
 
@@ -177,46 +195,63 @@
     HEAD の位置を変更するコマンド
     git reset [opt] ●●●
     オプションによってインデックス、ワーキングツリーの内容も変更できる。
-    
+
     ■ git reset のオプション
-    HEADの位置のみ変更する。インデックス・ワーキングツリーに影響はなし
+    HEADの位置のみ変更する。インデックス・ワーキングツリーに影響はなし(コミットの取り消し)
     --soft
-    
-    HEADの位置とインデックス変更する。ワーキングツリーに影響はなし
+
+    HEADの位置とインデックス変更する。ワーキングツリーに影響はなし（add の取り消し）
     --mixed(または、オプションなし)
-    
-    HEAD・インデックス・ワーキングツリーをすべて変更する
+
+    HEAD・インデックス・ワーキングツリーをすべて変更する（add もコミットも取り消し）
     --hard
-    
+
 修正コマンド例
-    
+
     HEAD の位置をHEADに変更し、インデックス、ワーキングツリーはそのままにする。つまり何も変わらない。
     git reset --soft HEAD
-    
-    HEAD の位置がHEAD^ に移動するだけ。インデックス、ワーキングツリーはそのまま。
+
+    HEAD の位置がHEAD^ に移動するだけ。インデックス、ワーキングツリーはそのまま。直前のcommitがインデックスに戻る。
     git reset --soft HEAD^
-    
-    HEAD、インデックスを HEAD に変更する。ワーキングツリーはそのまま。git addを取り消す方法としてよく使える
+
+    HEAD、インデックスを HEAD に変更する。ワーキングツリーはそのまま。git addが取り消される
     git reset HEAD
-    
-    ワーキングツリーの変更を残しつつ、HEAD、インデックスを HEAD^ に変更する。これも、変更前のインデックスのデータは消える
+
+    ワーキングツリーの変更を残しつつ、HEAD、インデックスを HEAD^ に変更する。直前のcommitとインデックスがワーキングツリーに戻る。
     git reset HEAD^
-    
+
     HEAD、インデックス、ワーキングツリーすべてを HEAD に変更する。git add,ワーキングツリーの内容は完全に失われる
     git reset --head HEAD
-    
+
     HEAD、インデックス、ワーキングツリーすべてを HEAD^ に変更する。git add,ワーキングツリーの内容は完全に失われる
     git reset --head HEAD^
 
     git resetコマンドは、実行前のHEADをORIG_HEADに保存するようになっている。間違ってgit resetコマンドを実行した場合には、このORIG_HEADを使えば戻せる。
     git reset --head ORIG_HEAD
 
+### コミットの内容を取り消すコミットを実行（コミットを取り消したというコミットを残す場合）
+
+    コミット内容を取り消すコミットを実行
+    git revert commitID
+
+    revert用に自動生成されるコミットメッセージを、そのまま採用する場合
+    git revert --no-edit commitID
+
+
+
 ### 直前にしたコミットをやり直す
-    
+
     コミットをした後で、追加で少しだけ修正がしたくなった場合に、直前にしたコミットをやり直す方法
     git commit --amend
     1. git add 追加ファイル
     2. git commit --amend
+
+    直前のコミットを取り消す
+    git reset --hard HEAD^
+
+    コミットを取り消すコミットを作成
+    git revert
+
 
 ## ファイルの削除、移動
 
@@ -226,11 +261,47 @@
     git rm 削除するファイル名
     例）git rm hoge.txt
 
+    git rm -f hoge.txt  強制的に hogeファイルを削除
+    git rm -r hoge.folder 強制的に　hogeフォルダを削除
+    git rm --cached hoge  ファイルを作業ツリーに残したままバージョン管理から外す
+
 ### 移動・名前変更
 
     gitの管理下に置かれたファイルの移動・名前変更
     git mv 移動元 移動先
     例）git mv log/hoge.txt tmp/hoge.txt
+
+    git mv -f hoge.txt moge.txt 移動先のファイルが存在する場合でも上書きして強制的に移動する
+    git mv -n hoge.txt moge.txt mvコマンドは実行されず、結果だけ確認する
+
+### バージョン管理外のファイルを削除する
+
+    git clean -f　　作業ツリーのバージョン管理外のファイルを削除(削除を実行)
+    git clean -n　　削除対象となるファイルを確認する。実際には削除は行われない。
+    git clean -d　　ファイルだけでなくフォルダも削除する
+    git clean -e pattern  削除対象から除外するファイルを指定する patternは正規表現を指定できる
+    git clean <path> 　削除対象のパスを限定する
+
+    *　.gitignoreなどで無視されている場合は、 git cleanの削除対象に含まれない。
+    *  使い方は、`git clean -n` で削除対象を確認後、`git clean -f`　で削除を行う
+
+
+
+## ファイルの表示
+
+### ファイルの状態を表示する
+
+    作業ツリー内のファイルの状態を表示
+    git status
+
+    短い出力フォーマットで出力
+    git status -s
+
+    ブランチ名を表示
+    git status -b
+
+    表示対象を限定
+    git status hoge/*.txt
 
 
 ## コミットに印をつける
@@ -248,7 +319,6 @@
     git tag -d <tag name>
 
 
-
 ## gitの管理下から外す場合
 
 ### .gitignoreファイルの使い方
@@ -261,6 +331,19 @@
 
 
 ## gitの設定変更メモ
+
+### 設定
+git configの設定範囲変更
+
+    git config  そのリポジトリ内のconfig設定
+    git config --global  そのユーザーのconfig設定
+    git config --system  そのPC内のconfig設定
+
+### 設定の確認・編集
+
+    git config -l 設定の一覧確認
+    git config -e 設定の直接編集
+
 
 ### terminalの出力への色づけ方法
 すべてをターミナルのデフォルト色設定にまかせる場合
@@ -275,6 +358,6 @@
     git config --global alias.st status
     git config --global alias.br branch
     git config --global alias.ci commit
-    
+
     登録したエイリアスの確認
     git config -l
