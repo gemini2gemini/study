@@ -1,0 +1,6 @@
+1. taguchi Apple, apple, apple, grape
+2. fkoji Banana, apple, Apple, lemon
+3. dotinstall Grape, apple, strawberry
+3. dotinstall Grape, apple, strawberry
+4. takahashi cherry, pear, kiwi
+5. yasuda cherry, Cherry
