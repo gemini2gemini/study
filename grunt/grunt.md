@@ -1,4 +1,6 @@
-# gruntの導入方法
+# grunt(グラント)の導入方法
+
+## Node.jsを利用したタスク自動化ツール(gruntjs.com)
 
 ## install
 
@@ -27,7 +29,7 @@ gruntのinstall　及び　package.jsonへの追記
     ( --save-dev を付けることで、package.jsonに記述が追加される)
 
 
-プラグインの追加 (grunt-contrib) 
+プラグインの追加 (grunt-contrib)
 (インストールしたいプラグインをinstallする)
 
     npm install grunt-contrib --save-dev
@@ -36,8 +38,8 @@ gruntのinstall　及び　package.jsonへの追記
     npm install grunt-contrib-●●　--save-dev
     (プラグインを個別に追加)
 
-※別のプロジェクトでも、毎回node_modulesを作成する必要があり、手間なので、  
-その場合は、その該当プロジェクトのフォルダに、package.jsonをコピーして、  
+※別のプロジェクトでも、毎回node_modulesを作成する必要があり、手間なので、
+その場合は、その該当プロジェクトのフォルダに、package.jsonをコピーして、
 
     npm install
 
@@ -50,7 +52,7 @@ gruntのinstall　及び　package.jsonへの追記
 
     module.exports = function(grunt) {
       grunt.initConfig({
-  
+
       });
     };
 
