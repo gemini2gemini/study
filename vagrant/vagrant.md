@@ -158,3 +158,10 @@
 + 有志の人が作った vagrant のbox置き場
 + 利用は自己責任
 + 様々なboxがあるので、自分の環境にあったものを使用
+
+
+## 補足
+
+    vagrantのappache修正
+    httpd.confの場所:  etc/httpd/conf/httpd.conf
+    修正する場合  sudo vim httpd.conf　とsudoをつけて、 保存する際は、 :wq! とする
