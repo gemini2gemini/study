@@ -1,0 +1,67 @@
+{
+    "project": {
+        "name": "プロジェクト名",
+        "description": "プロジェクトの概要",
+        "version": "バージョン指定"
+    },
+    "files": {
+        "dev/js/script/yuidoc-test.js": {
+            "name": "dev/js/script/yuidoc-test.js",
+            "modules": {},
+            "classes": {
+                "MyClass": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "MyClass": {
+            "name": "MyClass",
+            "shortname": "MyClass",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "dev/js/script/yuidoc-test.js",
+            "line": 1,
+            "description": "MyClassの説明",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "dev/js/script/yuidoc-test.js",
+            "line": 10,
+            "description": "hogeメソッドです。",
+            "itemtype": "method",
+            "name": "hoge",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "age",
+                    "description": "",
+                    "type": "Int"
+                }
+            ],
+            "class": "MyClass"
+        },
+        {
+            "file": "dev/js/script/yuidoc-test.js",
+            "line": 24,
+            "description": "fugaプロパティです。",
+            "itemtype": "property",
+            "name": "fuga",
+            "type": "Int",
+            "default": "10",
+            "class": "MyClass"
+        }
+    ],
+    "warnings": []
+}

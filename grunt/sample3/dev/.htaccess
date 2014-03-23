@@ -1,0 +1,48 @@
+# gzip圧縮に関する記述（再度考察必要）　Apache 1.x系
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{HTTP:Accept-Encoding} gzip
+	RewriteCond %{REQUEST_FILENAME} !\.gz$
+	RewriteCond %{REQUEST_FILENAME}\.gz -s
+
+	RewriteCond %{REQUEST_FILENAME} \.html$ [OR]
+	RewriteCond %{REQUEST_FILENAME} \.js$ [OR]
+	RewriteCond %{REQUEST_FILENAME} \.css$
+	RewriteRule .+ %{REQUEST_URI}.gz
+
+	<FilesMatch ".html.gz$">
+	    ForceType text/html
+	    AddEncoding x-gzip .gz
+	</FilesMatch>
+
+	<FilesMatch ".js.gz$">
+	    ForceType application/x-javascript
+	    AddEncoding x-gzip .gz
+	</FilesMatch>
+
+	<FilesMatch ".css.gz$">
+	    ForceType text/css
+	    AddEncoding x-gzip .gz
+	</FilesMatch>
+</IfModule>
+
+# gzip圧縮に関する記述（再度考察必要）　Apache 2.x系
+<ifModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/x-javascript
+</ifModule>
+
+# キャッシュの利用
+ExpiresActive on
+ExpiresDefault "access plus 1 month"
+
+# ETagの削除
+FileETag None
+
+# index.htmlが無いときに、file一覧が出ないようにする
+Options -Indexes
+
+#専用の エラーページへの誘導
+#ErrorDocument 401 /error/401.html
+#ErrorDocument 403 /error/403.html
+#ErrorDocument 404 /error/404.html
+#ErrorDocument 500 /error/500.html

@@ -1,0 +1,88 @@
+/*! 消えないコメント */
+@import "compass"
+//compassを使用するのに必須の記述
+// @import "_normalize" //normalize.cssをsassにして読み込み(パーシャル)
+// compassを使用した sprite生成
+//spriteにしたい画像が入っているfolderのパス+ *.png
+@import 'icons/*.png'
+//sassファイルからの画像への相対パスは記載せず、画像フォルダ名から直接記載する
+//spriteにした画像のcss記述出力 all-folder名-sprites
+=all-icons-sprites
+
+/*
+ *# サイト全体で使うCSS
+ *
+ *全ページで、このCSSを読み込む。*/
+
+// @import 'partial/mixin'
+
+/*# markdown記法で記述することでstyleguideになる
+ *# 1.ボタン
+ *
+ *ボタンです
+ *
+ *## 汎用ボタン
+ *
+ *    <button class="mod-btn" href="#">ボタン</button>
+ *    <button class="mod-btn :hover" href="#">ボタン(:hover)</button>*/
+
+.mod-btn
+  display: inline-block
+  padding: 5px
+  background-color: white
+  &:hover
+    background-color: gray
+
+
+/*
+ *　#その他
+ */
+
+body
+  margin: 20px
+
+div
+  width: 800px
+  height: 300px
+  margin: 0 auto
+  background-color: #534432
+
+.poge
+  width: 800px
+  height: 200px
+  margin: 0 auto
+  background-color: #773393
+  p
+    font-size: 24px
+    color: #fff
+
+h1
+  color: #f33f00
+  font-size: 54px
+  text-align: center
+
+h2
+  color: #990030
+  font-size: 30px
+  text-align: center
+
+p
+  font-size: 16px
+  hyphens: auto
+  color: #fff
+
+
+
+.hoge,.fuga,.piyo
+  +border-radius()
+
+.hoge
+  color: red
+
+.fuga
+  color: blue
+
+.piyo
+  color: yellow
+
+

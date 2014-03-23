@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/*! 消えないコメント */
+/* line 50, icons/*.png */
+.icons-sprite {
+  background: url('../img/icons-s26b3f1cd9f.png') no-repeat;
+}
+
+/*# サイト全体で使うCSS
+ *
+ *全ページで、このCSSを読み込む。 */
+/*# markdown記法で記述することでstyleguideになる
+ *# 1.ボタン
+ *
+ *ボタンです
+ *
+ *## 汎用ボタン
+ *
+ *    <button class="mod-btn" href="#">ボタン</button>
+ *    <button class="mod-btn :hover" href="#">ボタン(:hover)</button> */
+/* line 29, ../sass/main.sass */
+.mod-btn {
+  display: inline-block;
+  padding: 5px;
+  background-color: white;
+}
+/* line 33, ../sass/main.sass */
+.mod-btn:hover {
+  background-color: gray;
+}
+
+/*　#その他
+ */
+/* line 41, ../sass/main.sass */
+body {
+  margin: 20px;
+}
+
+/* line 44, ../sass/main.sass */
+div {
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #534432;
+}
+
+/* line 50, ../sass/main.sass */
+.poge {
+  width: 800px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: #773393;
+}
+/* line 55, ../sass/main.sass */
+.poge p {
+  font-size: 24px;
+  color: white;
+}
+
+/* line 59, ../sass/main.sass */
+h1 {
+  color: #f33f00;
+  font-size: 54px;
+  text-align: center;
+}
+
+/* line 64, ../sass/main.sass */
+h2 {
+  color: #990030;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* line 69, ../sass/main.sass */
+p {
+  font-size: 16px;
+  hyphens: auto;
+  color: white;
+}
+
+/* line 76, ../sass/main.sass */
+.hoge, .fuga, .piyo {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 79, ../sass/main.sass */
+.hoge {
+  color: red;
+}
+
+/* line 82, ../sass/main.sass */
+.fuga {
+  color: blue;
+}
+
+/* line 85, ../sass/main.sass */
+.piyo {
+  color: yellow;
+}
