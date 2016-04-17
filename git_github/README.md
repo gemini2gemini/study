@@ -1,5 +1,44 @@
 # Gitメモ
 
+## Gitのインストール方法
+
+### Git for Windowsを使用したインストール
+Gitのインストール方法はいろいろあるが、個人的にはインストールが簡単なGit for Windowsを使用する。  
+Git と Git Bashが簡単にインストールできるので気に入っている。
+
+[Git for Windows](http://git-for-windows.github.io/)
+
+#### インストール手順
+
+1. [Git for Windows](http://git-for-windows.github.io/)の Downloadをクリックしてインストローラーをダウンロード・インストール
+2. Adjusting your PATH environment の部分で、 Use Git form Git Bash Onlyを選択
+3. Configuring the line ending conversions（改行コードの変換設定）は、一番下の「Checkout as-is, commit as-is」を選択
+4. terminal emulator の選択は、 Use MinTTY(the default)を選択
+
+#### 設定手順(.gitconfig)
+Git Bash を起動して、以下のコマンドを入力して設定を行う  
+`git config` は、インストールしたGitの設定を行うコマンドで、 .gitconfig に記述される
+
+1. `git config --global user.name "Mei Sei" ` コミットに使われるユーザー名の設定
+2. `git config --global user.email "sample@email.com" ` コミットに使われるユーザーのE-mail設定
+3. `git config --global color.ui auto` Gitコマンドに色付け
+4. `git config --global core.quotepath false` 日本語ファイルが文字化けするのを防止
+5. `git config --global core.longpaths true` 長いファイルパスのファイルを取得できるように
+
+```
+// .gitconfig
+[user]
+    name = Mei Sei
+    email = sample@email.com
+[color]
+    ui = auto
+[core]
+    quotepath = false
+    longpaths = true
+```
+
+
+
 ## 作成
 
 ### 既存のデータから作成
