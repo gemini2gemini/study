@@ -24,17 +24,25 @@ Git Bash を起動して、以下のコマンドを入力して設定を行う
 3. `git config --global color.ui auto` Gitコマンドに色付け
 4. `git config --global core.quotepath false` 日本語ファイルが文字化けするのを防止
 5. `git config --global core.longpaths true` 長いファイルパスのファイルを取得できるように
+6. ``git config --global core.editor "'/c/program files/sublime text 2/sublime_text.exe' -w"`` 標準エディタを設定  
+   ※この場合、sublime text2　を指定  
+   Git Bashから直接起動できるように、.bashrc に、``alias subl="'/c/program files/sublime text 2/sublime_text.exe'"``を記述  
+　　　``subl``コマンドを打つと sublime textが起動する
+
+
+
 
 ```
 // .gitconfig
 [user]
-    name = Mei Sei
-    email = sample@email.com
+    name = Taisuke
+    email = taiyou.y3@gmail.com
 [color]
     ui = auto
 [core]
     quotepath = false
     longpaths = true
+    editor = '/c/program files/sublime text 2/sublime_text.exe' -w
 ```
 
 
