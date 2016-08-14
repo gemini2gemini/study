@@ -99,7 +99,14 @@
     + sandboxモードで修正が問題なければ、 vagrant sandbox commit コマンドで確定する
     + commit を行う場合は、仮想マシンが起動していると時間がかかるので、 vagrant suspendなどで一時的に停止する
 
+## vagrantの基本的な操作手順
 
+1. vagrantで作成した特定のboxに移動
+2. Vagrantfileがあるフォルダにて、 `vagrant up` コマンドを入力
+3. 仮想マシンが、VirtualBox上に立ち上がる
+4. 仮想マシン上のlocalhostにログインする場合は、 `vagrant ssh`　で入る
+5. ログイン以降は、unix コマンドで操作　`exit` でログアウト
+6. 仮想マシンを終了する場合は、`vagrant halt`　でシャットダウンする
 
 
 ## コマンドリスト
