@@ -87,3 +87,59 @@ Defaultでは有効。但し、開発環境で有効の場合、トラブル発�
 + 再起動する場合： `systemctl restart firewalld.service`
 + 停止する場合： `systemctl stop firewalld.service`
 
+
+### FTPサーバーのインストールと設定
+
+#### インストール(vsftpd = very secure ftpd)
+
++ rootユーザーの権限で以下のコマンドでインストール  
+  `yum -y install vsftpd`
++ 正しくインストールが出来たかどうかの確認には、以下のコマンドを入力  
+  `rpm -q vsftpd`  
+  成功した場合は、vsftpd のバージョン番号が表示される
+
+#### 設定
+
++ rootユーザーの権限で設定する必要あり
++ 設定ファイルは `/etc/vsftpd/vsftpd.conf`
++ 設定変更箇所  
+　　●匿名FTP機能を無効化  
+  `L12` `anoymous_enable=YES` →　`anoymous_enable=NO`  
+  ●ASCIIモードでのUPLOADを有効化  
+  `L82` `#ascii_upload_enable=YES` →　`ascii_upload_enable=YES`  
+  ●ASCIIモードでのDOWNLOADを有効化  
+  `L83` `#ascii_download_enable=YES` →　`ascii_download_enable=YES`  
+  ●vsftpd　をスタンドアロンで起動できるようにする  
+  `L114` `listen=NO` →　`listen=YES`  
+  ●IPv4ソケットの代わりにIPv6ソケットをlistenする listenオプションと同時に有効化できないため、listenを有効化すると、こちらは無効化必要  
+  `L123` `listen_ipv6=YES` →　`listen_ipv6=NO`
+
+#### 起動と起動確認
+
++ ●vsftpd の起動  
+  `systemctl start vsftpd.service`
++ ●vsftpd の起動確認  
+  `systemctl is-active vsftpd.service`　→ `active` と表示されたら起動成功
+
+#### 自動起動の設定
+
++ `systemctl enable vsftpd.service`
+
+
+#### FTPコマンドラインでのアクセス
+
+##### lftpコマンドのインストール
+
++ `yum -y install lftp`
+
+##### vsftpd の動作確認（lftpコマンド）
+
++ `lftp [ユーザー名@]ホスト名 or IPアドレス`  
+  例： `lftp test@localhost
++ パスワード部分には、`password` と入力（テストのため）  
++ プロンプト部分が `lftp ●●●●@localhost` となり、FTPコマンドが使用可能となる
+
+##### FTPクライアントで FTPサーバー接続テスト
+
++ IPアドレスの確認  
+  `ip addr show` で IPアドレスを確認することができる
